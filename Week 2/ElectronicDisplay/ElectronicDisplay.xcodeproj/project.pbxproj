@@ -1,0 +1,436 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2F35BBAAFB9547044C91AB3E /* Pods_ElectronicDisplay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25F4A881872524C267FED691 /* Pods_ElectronicDisplay.framework */; };
+		9D815CCF26CD2BB900DF4E70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D815CCE26CD2BB900DF4E70 /* AppDelegate.swift */; };
+		9D815CD126CD2BB900DF4E70 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D815CD026CD2BB900DF4E70 /* SceneDelegate.swift */; };
+		9D815CD326CD2BB900DF4E70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D815CD226CD2BB900DF4E70 /* ViewController.swift */; };
+		9D815CD626CD2BBA00DF4E70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D815CD426CD2BBA00DF4E70 /* Main.storyboard */; };
+		9D815CD926CD2BBA00DF4E70 /* ElectronicDisplay.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9D815CD726CD2BBA00DF4E70 /* ElectronicDisplay.xcdatamodeld */; };
+		9D815CDB26CD2BBE00DF4E70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D815CDA26CD2BBE00DF4E70 /* Assets.xcassets */; };
+		9D815CDE26CD2BBE00DF4E70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D815CDC26CD2BBE00DF4E70 /* LaunchScreen.storyboard */; };
+		9D815CE726CD358D00DF4E70 /* Extension_UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D815CE626CD358D00DF4E70 /* Extension_UIView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		25F4A881872524C267FED691 /* Pods_ElectronicDisplay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ElectronicDisplay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D815CCB26CD2BB900DF4E70 /* ElectronicDisplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElectronicDisplay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D815CCE26CD2BB900DF4E70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9D815CD026CD2BB900DF4E70 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9D815CD226CD2BB900DF4E70 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9D815CD526CD2BBA00DF4E70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9D815CD826CD2BBA00DF4E70 /* ElectronicDisplay.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ElectronicDisplay.xcdatamodel; sourceTree = "<group>"; };
+		9D815CDA26CD2BBE00DF4E70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9D815CDD26CD2BBE00DF4E70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9D815CDF26CD2BBE00DF4E70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D815CE626CD358D00DF4E70 /* Extension_UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension_UIView.swift; sourceTree = "<group>"; };
+		F3AAC118C8C2B0AD5C1BB908 /* Pods-ElectronicDisplay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElectronicDisplay.debug.xcconfig"; path = "Target Support Files/Pods-ElectronicDisplay/Pods-ElectronicDisplay.debug.xcconfig"; sourceTree = "<group>"; };
+		FFFF794C941C4B866ABDA93D /* Pods-ElectronicDisplay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElectronicDisplay.release.xcconfig"; path = "Target Support Files/Pods-ElectronicDisplay/Pods-ElectronicDisplay.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9D815CC826CD2BB900DF4E70 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F35BBAAFB9547044C91AB3E /* Pods_ElectronicDisplay.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		26C89543BE4E1FA192000D58 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				25F4A881872524C267FED691 /* Pods_ElectronicDisplay.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8A325EF4D7B38F17A9FEDD88 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F3AAC118C8C2B0AD5C1BB908 /* Pods-ElectronicDisplay.debug.xcconfig */,
+				FFFF794C941C4B866ABDA93D /* Pods-ElectronicDisplay.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9D815CC226CD2BB900DF4E70 = {
+			isa = PBXGroup;
+			children = (
+				9D815CCD26CD2BB900DF4E70 /* ElectronicDisplay */,
+				9D815CCC26CD2BB900DF4E70 /* Products */,
+				8A325EF4D7B38F17A9FEDD88 /* Pods */,
+				26C89543BE4E1FA192000D58 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9D815CCC26CD2BB900DF4E70 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9D815CCB26CD2BB900DF4E70 /* ElectronicDisplay.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9D815CCD26CD2BB900DF4E70 /* ElectronicDisplay */ = {
+			isa = PBXGroup;
+			children = (
+				9D815CCE26CD2BB900DF4E70 /* AppDelegate.swift */,
+				9D815CD026CD2BB900DF4E70 /* SceneDelegate.swift */,
+				9D815CD226CD2BB900DF4E70 /* ViewController.swift */,
+				9D815CD426CD2BBA00DF4E70 /* Main.storyboard */,
+				9D815CDA26CD2BBE00DF4E70 /* Assets.xcassets */,
+				9D815CDC26CD2BBE00DF4E70 /* LaunchScreen.storyboard */,
+				9D815CDF26CD2BBE00DF4E70 /* Info.plist */,
+				9D815CD726CD2BBA00DF4E70 /* ElectronicDisplay.xcdatamodeld */,
+				9D815CE626CD358D00DF4E70 /* Extension_UIView.swift */,
+			);
+			path = ElectronicDisplay;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9D815CCA26CD2BB900DF4E70 /* ElectronicDisplay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D815CE226CD2BBE00DF4E70 /* Build configuration list for PBXNativeTarget "ElectronicDisplay" */;
+			buildPhases = (
+				69CDDDB78283A7C2BBA6F3E0 /* [CP] Check Pods Manifest.lock */,
+				9D815CC726CD2BB900DF4E70 /* Sources */,
+				9D815CC826CD2BB900DF4E70 /* Frameworks */,
+				9D815CC926CD2BB900DF4E70 /* Resources */,
+				6E49AB650AA55C2F7E3FA34B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ElectronicDisplay;
+			productName = ElectronicDisplay;
+			productReference = 9D815CCB26CD2BB900DF4E70 /* ElectronicDisplay.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9D815CC326CD2BB900DF4E70 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					9D815CCA26CD2BB900DF4E70 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = 9D815CC626CD2BB900DF4E70 /* Build configuration list for PBXProject "ElectronicDisplay" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9D815CC226CD2BB900DF4E70;
+			productRefGroup = 9D815CCC26CD2BB900DF4E70 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9D815CCA26CD2BB900DF4E70 /* ElectronicDisplay */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9D815CC926CD2BB900DF4E70 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D815CDE26CD2BBE00DF4E70 /* LaunchScreen.storyboard in Resources */,
+				9D815CDB26CD2BBE00DF4E70 /* Assets.xcassets in Resources */,
+				9D815CD626CD2BBA00DF4E70 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		69CDDDB78283A7C2BBA6F3E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ElectronicDisplay-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E49AB650AA55C2F7E3FA34B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ElectronicDisplay/Pods-ElectronicDisplay-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ElectronicDisplay/Pods-ElectronicDisplay-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ElectronicDisplay/Pods-ElectronicDisplay-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9D815CC726CD2BB900DF4E70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D815CE726CD358D00DF4E70 /* Extension_UIView.swift in Sources */,
+				9D815CD926CD2BBA00DF4E70 /* ElectronicDisplay.xcdatamodeld in Sources */,
+				9D815CD326CD2BB900DF4E70 /* ViewController.swift in Sources */,
+				9D815CCF26CD2BB900DF4E70 /* AppDelegate.swift in Sources */,
+				9D815CD126CD2BB900DF4E70 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9D815CD426CD2BBA00DF4E70 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9D815CD526CD2BBA00DF4E70 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9D815CDC26CD2BBE00DF4E70 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9D815CDD26CD2BBE00DF4E70 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9D815CE026CD2BBE00DF4E70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9D815CE126CD2BBE00DF4E70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9D815CE326CD2BBE00DF4E70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3AAC118C8C2B0AD5C1BB908 /* Pods-ElectronicDisplay.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ElectronicDisplay/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ElectronicDisplay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9D815CE426CD2BBE00DF4E70 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFFF794C941C4B866ABDA93D /* Pods-ElectronicDisplay.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ElectronicDisplay/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ElectronicDisplay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9D815CC626CD2BB900DF4E70 /* Build configuration list for PBXProject "ElectronicDisplay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D815CE026CD2BBE00DF4E70 /* Debug */,
+				9D815CE126CD2BBE00DF4E70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D815CE226CD2BBE00DF4E70 /* Build configuration list for PBXNativeTarget "ElectronicDisplay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D815CE326CD2BBE00DF4E70 /* Debug */,
+				9D815CE426CD2BBE00DF4E70 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9D815CD726CD2BBA00DF4E70 /* ElectronicDisplay.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9D815CD826CD2BBA00DF4E70 /* ElectronicDisplay.xcdatamodel */,
+			);
+			currentVersion = 9D815CD826CD2BBA00DF4E70 /* ElectronicDisplay.xcdatamodel */;
+			path = ElectronicDisplay.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 9D815CC326CD2BB900DF4E70 /* Project object */;
+}

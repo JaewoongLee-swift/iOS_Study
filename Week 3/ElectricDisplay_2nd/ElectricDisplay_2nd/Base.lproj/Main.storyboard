@@ -1,0 +1,859 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ais-fO-wMI">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="VCK-cK-HGK">
+            <objects>
+                <viewController id="Ais-fO-wMI" customClass="ViewController" customModule="ElectricDisplay_2nd" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nvF-qm-w3V">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="iYU-ZH-jIJ">
+                                <rect key="frame" x="20" y="184" width="374" height="34"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="원하는 문장을 입력하세요" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="46u-xh-Dgh">
+                                        <rect key="frame" x="0.0" y="0.0" width="336" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="Ku0-S3-Bfl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cY6-Du-aWd">
+                                        <rect key="frame" x="344" y="0.0" width="30" height="34"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <state key="normal" title="입력">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="inputButton:" destination="Ais-fO-wMI" eventType="touchUpInside" id="Ldb-WF-51p"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이곳에 문장이 표시됩니다." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tR4-Ah-i3f">
+                                <rect key="frame" x="20" y="228" width="374" height="440"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="opaqueSeparatorColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="GsC-fp-8Ql">
+                                <rect key="frame" x="24" y="718.5" width="366" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBh-4z-zfX">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Evc-tz-uVG"/>
+                                            <constraint firstAttribute="width" constant="30" id="i7V-aZ-Bi1"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="colorButton:" destination="Ais-fO-wMI" eventType="touchUpInside" id="Zl5-kw-qiU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dqb-El-RLA">
+                                        <rect key="frame" x="48" y="0.0" width="30" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="ATE-IT-fZg"/>
+                                            <constraint firstAttribute="width" constant="30" id="mCP-Bk-ELg"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="colorButton:" destination="Ais-fO-wMI" eventType="touchUpInside" id="Yj7-Zm-lgL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19E-Mq-xnt">
+                                        <rect key="frame" x="96" y="0.0" width="30" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="47R-kk-hyh"/>
+                                            <constraint firstAttribute="height" constant="30" id="5Ms-dI-KsV"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="colorButton:" destination="Ais-fO-wMI" eventType="touchUpInside" id="RzA-3V-jeI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pex-yv-7vJ">
+                                        <rect key="frame" x="144" y="0.0" width="30" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="P7j-0U-niG"/>
+                                            <constraint firstAttribute="height" constant="30" id="PQV-X7-H00"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="colorButton:" destination="Ais-fO-wMI" eventType="touchUpInside" id="hdz-xO-B4o"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqI-Y1-piq">
+                                        <rect key="frame" x="192" y="0.0" width="30" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="8AL-J2-0Cx"/>
+                                            <constraint firstAttribute="height" constant="30" id="dGl-Uf-Qpl"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="colorButton:" destination="Ais-fO-wMI" eventType="touchUpInside" id="lwE-oL-Umd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ft9-Wa-YcE">
+                                        <rect key="frame" x="240" y="0.0" width="30" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="D2V-WR-lRZ"/>
+                                            <constraint firstAttribute="height" constant="30" id="laQ-8E-Kuz"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="colorButton:" destination="Ais-fO-wMI" eventType="touchUpInside" id="ecz-92-J6N"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5b-HK-gkf">
+                                        <rect key="frame" x="288" y="0.0" width="30" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="QXd-PN-7XJ"/>
+                                            <constraint firstAttribute="width" constant="30" id="Rx0-oW-ZaQ"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="colorButton:" destination="Ais-fO-wMI" eventType="touchUpInside" id="hdy-oB-X1v"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ite-ea-WnL">
+                                        <rect key="frame" x="336" y="0.0" width="30" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Iyj-3x-zMM"/>
+                                            <constraint firstAttribute="width" constant="30" id="iKL-5l-mzr"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="colorButton:" destination="Ais-fO-wMI" eventType="touchUpInside" id="ilU-hp-heC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="원하는 색상을 터치하세요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsc-oy-Jk2">
+                                <rect key="frame" x="122" y="688" width="170.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tN-zd-6UK">
+                                <rect key="frame" x="181" y="763.5" width="52" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="색상표">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="moveColorscope:" destination="Ais-fO-wMI" eventType="touchUpInside" id="EOX-ly-8m0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2On-gg-B4g">
+                                <rect key="frame" x="163" y="822" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="깜빡임">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="alphaButton:" destination="Ais-fO-wMI" eventType="touchUpInside" id="TpR-fs-sC7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vy5-pI-Z2I">
+                                <rect key="frame" x="221" y="827" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="강조">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="scaleButton:" destination="Ais-fO-wMI" eventType="touchUpInside" id="9mJ-mb-u5e"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DT3-Im-UMm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6tN-zd-6UK" firstAttribute="top" secondItem="GsC-fp-8Ql" secondAttribute="bottom" constant="15" id="62e-G0-g6P"/>
+                            <constraint firstItem="bsc-oy-Jk2" firstAttribute="top" secondItem="tR4-Ah-i3f" secondAttribute="bottom" constant="20" id="Ev3-bs-byk"/>
+                            <constraint firstItem="tR4-Ah-i3f" firstAttribute="leading" secondItem="DT3-Im-UMm" secondAttribute="leading" constant="20" id="O0d-g7-YI3"/>
+                            <constraint firstItem="DT3-Im-UMm" firstAttribute="trailing" secondItem="iYU-ZH-jIJ" secondAttribute="trailing" constant="20" id="R6X-We-akO"/>
+                            <constraint firstItem="tR4-Ah-i3f" firstAttribute="centerX" secondItem="nvF-qm-w3V" secondAttribute="centerX" id="TdA-tb-kh9"/>
+                            <constraint firstItem="bsc-oy-Jk2" firstAttribute="centerX" secondItem="nvF-qm-w3V" secondAttribute="centerX" id="Uot-Fe-trT"/>
+                            <constraint firstItem="iYU-ZH-jIJ" firstAttribute="leading" secondItem="DT3-Im-UMm" secondAttribute="leading" constant="20" id="V61-qz-Jol"/>
+                            <constraint firstItem="GsC-fp-8Ql" firstAttribute="top" secondItem="bsc-oy-Jk2" secondAttribute="bottom" constant="10" id="Xni-Ul-JqO"/>
+                            <constraint firstItem="DT3-Im-UMm" firstAttribute="trailing" secondItem="tR4-Ah-i3f" secondAttribute="trailing" constant="20" id="beB-zW-tqO"/>
+                            <constraint firstItem="tR4-Ah-i3f" firstAttribute="centerY" secondItem="nvF-qm-w3V" secondAttribute="centerY" id="mJe-tX-SMc"/>
+                            <constraint firstItem="GsC-fp-8Ql" firstAttribute="centerX" secondItem="nvF-qm-w3V" secondAttribute="centerX" id="p14-Op-Ji2"/>
+                            <constraint firstItem="iYU-ZH-jIJ" firstAttribute="centerX" secondItem="nvF-qm-w3V" secondAttribute="centerX" id="qfO-ne-mr8"/>
+                            <constraint firstItem="iYU-ZH-jIJ" firstAttribute="top" secondItem="DT3-Im-UMm" secondAttribute="top" constant="140" id="rQS-1t-le2"/>
+                            <constraint firstItem="6tN-zd-6UK" firstAttribute="centerX" secondItem="nvF-qm-w3V" secondAttribute="centerX" id="tQl-vf-K9c"/>
+                            <constraint firstItem="tR4-Ah-i3f" firstAttribute="top" secondItem="iYU-ZH-jIJ" secondAttribute="bottom" constant="10" id="xbT-MD-zAG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="DWJ-b2-PQw"/>
+                    <connections>
+                        <outlet property="inputText" destination="46u-xh-Dgh" id="PSL-zp-Mek"/>
+                        <outlet property="outputText" destination="tR4-Ah-i3f" id="mQV-zF-4OE"/>
+                        <outletCollection property="colorButtons" destination="UBh-4z-zfX" collectionClass="NSMutableArray" id="3lI-Dm-azF"/>
+                        <outletCollection property="colorButtons" destination="Dqb-El-RLA" collectionClass="NSMutableArray" id="mCX-lc-4D2"/>
+                        <outletCollection property="colorButtons" destination="19E-Mq-xnt" collectionClass="NSMutableArray" id="4BL-jg-m2f"/>
+                        <outletCollection property="colorButtons" destination="Pex-yv-7vJ" collectionClass="NSMutableArray" id="n5b-G6-KvF"/>
+                        <outletCollection property="colorButtons" destination="aqI-Y1-piq" collectionClass="NSMutableArray" id="Fga-do-1Dj"/>
+                        <outletCollection property="colorButtons" destination="ft9-Wa-YcE" collectionClass="NSMutableArray" id="H59-qk-N1Z"/>
+                        <outletCollection property="colorButtons" destination="u5b-HK-gkf" collectionClass="NSMutableArray" id="l12-AW-g8v"/>
+                        <outletCollection property="colorButtons" destination="Ite-ea-WnL" collectionClass="NSMutableArray" id="w8e-vC-VBo"/>
+                        <segue destination="EXK-IV-cc0" kind="presentation" identifier="colorSegue" id="Xj8-EH-pvR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sfl-fS-jJm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-42.028985507246382" y="-7.3660714285714279"/>
+        </scene>
+        <!--Color Controller-->
+        <scene sceneID="sIB-gv-6bx">
+            <objects>
+                <viewController storyboardIdentifier="ColorController" id="EXK-IV-cc0" customClass="ColorController" customModule="ElectricDisplay_2nd" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E6r-7V-Qq9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="kuF-ir-yCh">
+                                <rect key="frame" x="62" y="178.5" width="290" height="485"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="tdm-wd-Of8">
+                                        <rect key="frame" x="2.5" y="0.0" width="285" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Rb-cD-Ga0">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="1SV-ZI-GTa"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3t-TM-EVs">
+                                                <rect key="frame" x="51" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="8ua-0e-bWb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aou-N9-LNr">
+                                                <rect key="frame" x="102" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="jMe-Be-1XK"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VtI-o0-wXL">
+                                                <rect key="frame" x="153" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="otz-AZ-aEg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mKC-EN-Mle">
+                                                <rect key="frame" x="204" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="9yT-Tb-7Qw"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J4Z-tc-gXo">
+                                                <rect key="frame" x="255" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="8sB-iv-VBS"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="f4n-nR-6wY">
+                                        <rect key="frame" x="0.0" y="65" width="290" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lTy-Bg-Va2">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="AJt-pG-56v"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yiP-L2-GDR">
+                                                <rect key="frame" x="52" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="1Xt-aK-gcC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tO-IY-rFY">
+                                                <rect key="frame" x="104" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="pPS-AP-5EC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jef-qC-6au">
+                                                <rect key="frame" x="156" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="1rY-lp-RME"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YB9-qA-0E2">
+                                                <rect key="frame" x="208" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="g4f-m2-RVA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X78-e5-o5P">
+                                                <rect key="frame" x="260" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="Uuq-vn-9Ga"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="AIR-2d-qXj">
+                                        <rect key="frame" x="2.5" y="130" width="285" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axw-iq-LxC">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="Xtt-NV-SuT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lfp-zy-rSL">
+                                                <rect key="frame" x="51" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="J3A-ev-aFh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCN-9w-7Bd">
+                                                <rect key="frame" x="102" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="YAd-07-uqc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TOO-Td-e8Y">
+                                                <rect key="frame" x="153" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="Jup-qn-s5F"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1TO-x5-eeb">
+                                                <rect key="frame" x="204" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="IYk-Ws-GUK"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3zg-HY-AgR">
+                                                <rect key="frame" x="255" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="MjH-7q-seA"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="jw2-lo-hAv">
+                                        <rect key="frame" x="0.0" y="195" width="290" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qQM-T5-zSk">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="w6g-Rb-G70"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6r2-5c-TNN">
+                                                <rect key="frame" x="52" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="CGb-vL-ldE"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTF-4d-kuA">
+                                                <rect key="frame" x="104" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="I8C-Zi-lfX"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mAf-Tf-SYC">
+                                                <rect key="frame" x="156" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.84465640779999995" green="0.51457053419999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="z80-xL-k5d"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzc-k3-Pb8">
+                                                <rect key="frame" x="208" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.52120530610000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="oIg-ZK-NJN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9kB-yZ-3YE">
+                                                <rect key="frame" x="260" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="1" green="0.5409764051" blue="0.84731429820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="s2t-Ec-RzR"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="r5E-0q-gh1">
+                                        <rect key="frame" x="2.5" y="260" width="285" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ge-wY-pbh">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="3vX-Re-4IS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EkE-2c-hVd">
+                                                <rect key="frame" x="51" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="O1d-hl-pCc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nHc-1D-iTq">
+                                                <rect key="frame" x="102" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.57380741830000004" green="0.56553578380000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="Wzs-Qc-R2k"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yll-26-Piq">
+                                                <rect key="frame" x="153" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="6zE-OC-U6n"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NXc-h0-GuE">
+                                                <rect key="frame" x="204" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="1B6-WK-UL4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5d-8m-SQn">
+                                                <rect key="frame" x="255" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="L1F-O1-y5p"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="lDP-yy-aDQ">
+                                        <rect key="frame" x="0.0" y="325" width="290" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5C2-FP-UeA">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="f6w-Mv-8Re"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDO-nI-MkP">
+                                                <rect key="frame" x="52" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="CKu-M4-46r"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhc-BA-UEt">
+                                                <rect key="frame" x="104" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="G1y-gQ-7M6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VE9-6K-CTu">
+                                                <rect key="frame" x="156" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.32369780539999998" green="0.1063579395" blue="0.574860394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="RGR-NZ-5q1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pk-nz-fxs">
+                                                <rect key="frame" x="208" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.58105844259999995" green="0.12855249639999999" blue="0.57453137639999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="2SJ-nH-sX5"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUN-D8-glm">
+                                                <rect key="frame" x="260" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="vlN-Ku-v8a"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="BV6-0Q-ICK">
+                                        <rect key="frame" x="0.0" y="390" width="290" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l5J-OA-SzM">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="IeR-ER-RZ5"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUn-AB-0TU">
+                                                <rect key="frame" x="52" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="fmc-Ab-GN6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S36-uC-gUf">
+                                                <rect key="frame" x="104" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="rKi-O8-Lky"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fN8-Gl-aUY">
+                                                <rect key="frame" x="156" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="8P2-lp-MIH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nD-K4-iY8">
+                                                <rect key="frame" x="208" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="wBL-fQ-M6a"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXz-si-JFS">
+                                                <rect key="frame" x="260" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="l2Z-fc-GGm"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="cYY-CY-pk6">
+                                        <rect key="frame" x="0.0" y="455" width="290" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1PS-Mb-vd0">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="Ieq-yH-5UV"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHC-2U-iQU">
+                                                <rect key="frame" x="52" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="c3a-9Y-Df6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0qQ-kq-hvN">
+                                                <rect key="frame" x="104" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="Q68-bD-dpQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8e-m1-V1h">
+                                                <rect key="frame" x="156" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="MQu-eb-n7w"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iru-y8-0WI">
+                                                <rect key="frame" x="208" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="JoW-CE-O8g"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FR2-aY-rT4">
+                                                <rect key="frame" x="260" y="0.0" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer." value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="colorButton:" destination="EXK-IV-cc0" eventType="touchUpInside" id="Yq3-qy-Ncf"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="원하는 색상을 터치하세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUF-Ax-1h9">
+                                <rect key="frame" x="67.5" y="85" width="279" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Svs-x2-QsJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kuF-ir-yCh" firstAttribute="top" secondItem="rUF-Ax-1h9" secondAttribute="bottom" constant="60" id="46j-S8-VQs"/>
+                            <constraint firstItem="kuF-ir-yCh" firstAttribute="centerY" secondItem="E6r-7V-Qq9" secondAttribute="centerY" id="MCb-sI-Trb"/>
+                            <constraint firstItem="rUF-Ax-1h9" firstAttribute="centerX" secondItem="E6r-7V-Qq9" secondAttribute="centerX" id="P3s-1J-Bee"/>
+                            <constraint firstItem="kuF-ir-yCh" firstAttribute="centerX" secondItem="E6r-7V-Qq9" secondAttribute="centerX" id="lbc-6e-hi6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outletCollection property="colorButtons" destination="1Rb-cD-Ga0" collectionClass="NSMutableArray" id="4rv-su-Sxq"/>
+                        <outletCollection property="colorButtons" destination="J3t-TM-EVs" collectionClass="NSMutableArray" id="qge-Np-Afi"/>
+                        <outletCollection property="colorButtons" destination="aou-N9-LNr" collectionClass="NSMutableArray" id="6oC-xB-e31"/>
+                        <outletCollection property="colorButtons" destination="VtI-o0-wXL" collectionClass="NSMutableArray" id="yFC-3L-hGu"/>
+                        <outletCollection property="colorButtons" destination="mKC-EN-Mle" collectionClass="NSMutableArray" id="5WT-Th-14Q"/>
+                        <outletCollection property="colorButtons" destination="J4Z-tc-gXo" collectionClass="NSMutableArray" id="B7x-MN-B8R"/>
+                        <outletCollection property="colorButtons" destination="lTy-Bg-Va2" collectionClass="NSMutableArray" id="XHu-Ko-3OS"/>
+                        <outletCollection property="colorButtons" destination="yiP-L2-GDR" collectionClass="NSMutableArray" id="0v8-sa-igC"/>
+                        <outletCollection property="colorButtons" destination="2tO-IY-rFY" collectionClass="NSMutableArray" id="dGf-7L-P5f"/>
+                        <outletCollection property="colorButtons" destination="jef-qC-6au" collectionClass="NSMutableArray" id="cCf-h6-ULK"/>
+                        <outletCollection property="colorButtons" destination="YB9-qA-0E2" collectionClass="NSMutableArray" id="th5-lF-N4K"/>
+                        <outletCollection property="colorButtons" destination="X78-e5-o5P" collectionClass="NSMutableArray" id="cZl-kz-q5x"/>
+                        <outletCollection property="colorButtons" destination="axw-iq-LxC" collectionClass="NSMutableArray" id="2vR-6o-hn1"/>
+                        <outletCollection property="colorButtons" destination="lfp-zy-rSL" collectionClass="NSMutableArray" id="dSJ-Pi-Weh"/>
+                        <outletCollection property="colorButtons" destination="JCN-9w-7Bd" collectionClass="NSMutableArray" id="Ie5-WA-WNB"/>
+                        <outletCollection property="colorButtons" destination="TOO-Td-e8Y" collectionClass="NSMutableArray" id="hF7-35-64P"/>
+                        <outletCollection property="colorButtons" destination="1TO-x5-eeb" collectionClass="NSMutableArray" id="hYP-5t-eWV"/>
+                        <outletCollection property="colorButtons" destination="qQM-T5-zSk" collectionClass="NSMutableArray" id="Xhf-mi-BuO"/>
+                        <outletCollection property="colorButtons" destination="6r2-5c-TNN" collectionClass="NSMutableArray" id="Pwd-ls-5Mp"/>
+                        <outletCollection property="colorButtons" destination="fTF-4d-kuA" collectionClass="NSMutableArray" id="Fwn-7X-Ww7"/>
+                        <outletCollection property="colorButtons" destination="mAf-Tf-SYC" collectionClass="NSMutableArray" id="C5u-tn-SX2"/>
+                        <outletCollection property="colorButtons" destination="jzc-k3-Pb8" collectionClass="NSMutableArray" id="LhX-hQ-93E"/>
+                        <outletCollection property="colorButtons" destination="9kB-yZ-3YE" collectionClass="NSMutableArray" id="uUu-n7-uve"/>
+                        <outletCollection property="colorButtons" destination="6Ge-wY-pbh" collectionClass="NSMutableArray" id="x0m-wN-uMH"/>
+                        <outletCollection property="colorButtons" destination="EkE-2c-hVd" collectionClass="NSMutableArray" id="rtg-tH-laD"/>
+                        <outletCollection property="colorButtons" destination="nHc-1D-iTq" collectionClass="NSMutableArray" id="3iF-lw-TCA"/>
+                        <outletCollection property="colorButtons" destination="Yll-26-Piq" collectionClass="NSMutableArray" id="JRf-Jv-Ye6"/>
+                        <outletCollection property="colorButtons" destination="NXc-h0-GuE" collectionClass="NSMutableArray" id="fEc-gJ-ldP"/>
+                        <outletCollection property="colorButtons" destination="n5d-8m-SQn" collectionClass="NSMutableArray" id="t8p-hE-gtR"/>
+                        <outletCollection property="colorButtons" destination="5C2-FP-UeA" collectionClass="NSMutableArray" id="5vw-lx-lWX"/>
+                        <outletCollection property="colorButtons" destination="vDO-nI-MkP" collectionClass="NSMutableArray" id="6it-je-Jba"/>
+                        <outletCollection property="colorButtons" destination="hhc-BA-UEt" collectionClass="NSMutableArray" id="ki0-aB-xGf"/>
+                        <outletCollection property="colorButtons" destination="VE9-6K-CTu" collectionClass="NSMutableArray" id="4DS-bX-Mxd"/>
+                        <outletCollection property="colorButtons" destination="8pk-nz-fxs" collectionClass="NSMutableArray" id="4YG-1K-nui"/>
+                        <outletCollection property="colorButtons" destination="yUN-D8-glm" collectionClass="NSMutableArray" id="Cev-ds-uFx"/>
+                        <outletCollection property="colorButtons" destination="l5J-OA-SzM" collectionClass="NSMutableArray" id="pue-rY-ZRv"/>
+                        <outletCollection property="colorButtons" destination="eUn-AB-0TU" collectionClass="NSMutableArray" id="jKK-C5-PM5"/>
+                        <outletCollection property="colorButtons" destination="S36-uC-gUf" collectionClass="NSMutableArray" id="VhY-QJ-NEU"/>
+                        <outletCollection property="colorButtons" destination="fN8-Gl-aUY" collectionClass="NSMutableArray" id="qQy-qo-UGM"/>
+                        <outletCollection property="colorButtons" destination="0nD-K4-iY8" collectionClass="NSMutableArray" id="V4Z-Pb-uuD"/>
+                        <outletCollection property="colorButtons" destination="EXz-si-JFS" collectionClass="NSMutableArray" id="Qqs-nZ-LrU"/>
+                        <outletCollection property="colorButtons" destination="1PS-Mb-vd0" collectionClass="NSMutableArray" id="d4w-NF-ffq"/>
+                        <outletCollection property="colorButtons" destination="sHC-2U-iQU" collectionClass="NSMutableArray" id="NiY-qs-Hhm"/>
+                        <outletCollection property="colorButtons" destination="0qQ-kq-hvN" collectionClass="NSMutableArray" id="zv0-sx-7Ln"/>
+                        <outletCollection property="colorButtons" destination="x8e-m1-V1h" collectionClass="NSMutableArray" id="XFj-Gb-Q20"/>
+                        <outletCollection property="colorButtons" destination="iru-y8-0WI" collectionClass="NSMutableArray" id="YYw-Vd-6fz"/>
+                        <outletCollection property="colorButtons" destination="FR2-aY-rT4" collectionClass="NSMutableArray" id="lPk-ob-CjC"/>
+                        <outletCollection property="colorButtons" destination="3zg-HY-AgR" collectionClass="NSMutableArray" id="Nid-Q3-KAs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vy2-5q-Dol" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="785.50724637681162" y="-7.3660714285714279"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

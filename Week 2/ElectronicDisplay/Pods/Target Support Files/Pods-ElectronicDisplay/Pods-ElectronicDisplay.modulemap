@@ -1,0 +1,6 @@
+framework module Pods_ElectronicDisplay {
+  umbrella header "Pods-ElectronicDisplay-umbrella.h"
+
+  export *
+  module * { export * }
+}
