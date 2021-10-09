@@ -14,9 +14,9 @@
 		9D43804926EAF3A300C1F0EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D43804826EAF3A300C1F0EF /* Assets.xcassets */; };
 		9D43804C26EAF3A300C1F0EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D43804A26EAF3A300C1F0EF /* LaunchScreen.storyboard */; };
 		9D43805426EAF47900C1F0EF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D43805326EAF47900C1F0EF /* LoginViewController.swift */; };
+		9D8F7029271141AD005A93D2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D8F7028271141AD005A93D2 /* GoogleService-Info.plist */; };
 		9DCD971A26EB22B4007CCCBB /* EnterEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCD971926EB22B4007CCCBB /* EnterEmailViewController.swift */; };
 		9DCD971C26EB2B74007CCCBB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCD971B26EB2B74007CCCBB /* MainViewController.swift */; };
-		9DCD971E26EB34B7007CCCBB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9DCD971D26EB34B7007CCCBB /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,9 +30,9 @@
 		9D43804B26EAF3A300C1F0EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D43804D26EAF3A300C1F0EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D43805326EAF47900C1F0EF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9D8F7028271141AD005A93D2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		9DCD971926EB22B4007CCCBB /* EnterEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterEmailViewController.swift; sourceTree = "<group>"; };
 		9DCD971B26EB2B74007CCCBB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		9DCD971D26EB34B7007CCCBB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ECC7E8E4FA94BB4E3E97FB18 /* Pods-SpotifyLoginSampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpotifyLoginSampleApp.release.xcconfig"; path = "Target Support Files/Pods-SpotifyLoginSampleApp/Pods-SpotifyLoginSampleApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,8 +94,8 @@
 				9D43804526EAF3A000C1F0EF /* Main.storyboard */,
 				9D43804826EAF3A300C1F0EF /* Assets.xcassets */,
 				9D43804A26EAF3A300C1F0EF /* LaunchScreen.storyboard */,
+				9D8F7028271141AD005A93D2 /* GoogleService-Info.plist */,
 				9D43804D26EAF3A300C1F0EF /* Info.plist */,
-				9DCD971D26EB34B7007CCCBB /* GoogleService-Info.plist */,
 			);
 			path = SpotifyLoginSampleApp;
 			sourceTree = "<group>";
@@ -161,7 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D43804C26EAF3A300C1F0EF /* LaunchScreen.storyboard in Resources */,
-				9DCD971E26EB34B7007CCCBB /* GoogleService-Info.plist in Resources */,
+				9D8F7029271141AD005A93D2 /* GoogleService-Info.plist in Resources */,
 				9D43804926EAF3A300C1F0EF /* Assets.xcassets in Resources */,
 				9D43804726EAF3A000C1F0EF /* Main.storyboard in Resources */,
 			);
