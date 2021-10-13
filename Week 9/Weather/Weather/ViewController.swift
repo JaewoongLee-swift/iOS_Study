@@ -8,12 +8,37 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var cityNameTextField: UITextField!
+    @IBOutlet weak var cityNameLabel: UILabel!
+    @IBOutlet weak var weatherDescriptionLabel: UILabel!
+    @IBOutlet weak var tempLabel: UILabel!
+    @IBOutlet weak var maxTempLabel: UILabel!
+    @IBOutlet weak var minTempLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func tapFetchWeatherButton(_ sender: UIButton) {
+        if let cityName = self.cityNameTextField.text {
+            self.getCurrentWeather(cityName: cityName)
+            self.view.endEditing(true)  //버튼이 눌리면 키보드가 사라지게 만듬
+        }
+    }
+    
+    func getCurrentWeather(cityName: String) {
+        guard let url = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(cityName)&appid=010e6e80ce8579ce8dfb9a912f307924") else { return }
+        let session = URLSession(configuration: .default)
+        session.dataTask(with: url) { data, response, error in
+            // data : 서버에서 응답받은 데이터(우리가 받을 json)
+            // response : http 헤더 및 상태코드와 같은 응답 미터 데이터
+            // error : 요청을 실패하게 되면 에러객체가 전달됨. 요청에 성공하면 nil이 반환
+            guard let data = data, error == nil else { return } // error == nil 이면 요청 성공
+            let decoder = JSONDecoder()
+            let weatherInformation = try? decoder.decode(WeatherInformation.self, from: data)
+            debugPrint(weatherInformation)
+        }.resume()
+    }
+    
 }
 
