@@ -15,6 +15,7 @@
 		9D29A46127195F5900CB7ED6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D29A46027195F5900CB7ED6 /* Assets.xcassets */; };
 		9D29A46427195F5900CB7ED6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D29A46227195F5900CB7ED6 /* LaunchScreen.storyboard */; };
 		9D29A46E2719673A00CB7ED6 /* CovidDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D29A46D2719673A00CB7ED6 /* CovidDetailViewController.swift */; };
+		9D29A470271969E200CB7ED6 /* CityCovidOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D29A46F271969E200CB7ED6 /* CityCovidOverview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		9D29A46327195F5900CB7ED6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D29A46527195F5900CB7ED6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D29A46D2719673A00CB7ED6 /* CovidDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidDetailViewController.swift; sourceTree = "<group>"; };
+		9D29A46F271969E200CB7ED6 /* CityCovidOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCovidOverview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				9D29A45927195F5700CB7ED6 /* SceneDelegate.swift */,
 				9D29A45B27195F5700CB7ED6 /* ViewController.swift */,
 				9D29A46D2719673A00CB7ED6 /* CovidDetailViewController.swift */,
+				9D29A46F271969E200CB7ED6 /* CityCovidOverview.swift */,
 				9D29A45D27195F5700CB7ED6 /* Main.storyboard */,
 				9D29A46027195F5900CB7ED6 /* Assets.xcassets */,
 				9D29A46227195F5900CB7ED6 /* LaunchScreen.storyboard */,
@@ -212,6 +215,7 @@
 				9D29A45C27195F5700CB7ED6 /* ViewController.swift in Sources */,
 				9D29A46E2719673A00CB7ED6 /* CovidDetailViewController.swift in Sources */,
 				9D29A45827195F5700CB7ED6 /* AppDelegate.swift in Sources */,
+				9D29A470271969E200CB7ED6 /* CityCovidOverview.swift in Sources */,
 				9D29A45A27195F5700CB7ED6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
