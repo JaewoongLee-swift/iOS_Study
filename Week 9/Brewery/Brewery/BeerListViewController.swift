@@ -9,6 +9,7 @@ import UIKit
 
 class BeerListViewController: UITableViewController {
     var beerList = [Beer]()
+    var dataTasks = [URLSessionTask]()
     var currentPage = 1
     
     override func viewDidLoad() {
@@ -21,6 +22,7 @@ class BeerListViewController: UITableViewController {
         //UITableView 설정
         tableView.register(BeerListCell.self, forCellReuseIdentifier: "BeerListCell") // 셀 등록
         tableView.rowHeight = 150
+        tableView.prefetchDataSource = self
         
         fetchBeer(of: currentPage)
     }
@@ -52,10 +54,27 @@ extension BeerListViewController {
     }
 }
 
+extension BeerListViewController: UITableViewDataSourcePrefetching {
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+            // 다음 페이지를 여기서 구현하면 미리 불러오고 스크롤을 내렸을때 나타날 수 있게 구현할 수 있음
+            guard currentPage != 1 else  { return }
+        
+        indexPaths.forEach {
+            if ($0.row + 1)/25 + 1 == currentPage {
+                self.fetchBeer(of: currentPage)
+            }
+        }
+    }
+    
+}
+
 //Data Fetching
 private extension BeerListViewController {
     func fetchBeer(of page: Int) {
-        guard let url = URL(string: "https://api.punkapi.com/v2/beers?page=\(page)") else { return }
+        guard let url = URL(string: "https://api.punkapi.com/v2/beers?page=\(page)"),
+              dataTasks.firstIndex(where: { $0.originalRequest?.url == url }) == nil else { return }
+        //새롭게 요청된 url이 이미 요청되어 있는 dataTasks의 url이 아니여야 한다는 의미. 이미 있다면 한번 요청되었던 데이터라는 의미
+        
         
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
@@ -96,5 +115,6 @@ private extension BeerListViewController {
             }
         }
         dataTask.resume()
+        dataTasks.append(dataTask)
     }
 }
