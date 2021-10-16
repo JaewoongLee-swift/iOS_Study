@@ -8,14 +8,31 @@
 import UIKit
 
 class CovidDetailViewController: UITableViewController {
-    @IBOutlet weak var newCaseCell: UILabel!
-    @IBOutlet weak var totalCaseCell: UILabel!
-    @IBOutlet weak var recoveredCell: UILabel!
-    @IBOutlet weak var deathCell: UILabel!
-    @IBOutlet weak var percentageCell: UILabel!
-    @IBOutlet weak var overseasInflowCell: UILabel!
-    @IBOutlet weak var regionalOutbreakCell: UILabel!
+    @IBOutlet weak var newCaseCell: UITableViewCell!
+    @IBOutlet weak var totalCaseCell: UITableViewCell!
+    @IBOutlet weak var recoveredCell: UITableViewCell!
+    @IBOutlet weak var deathCell: UITableViewCell!
+    @IBOutlet weak var percentageCell: UITableViewCell!
+    @IBOutlet weak var overseasInflowCell: UITableViewCell!
+    @IBOutlet weak var regionalOutbreakCell: UITableViewCell!
+    
+    
+    var covidOverview: CovidOverview?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureview()
+    }
+    
+    func configureview() {
+        guard let covidOverview = self.covidOverview else { return }
+        self.title = covidOverview.countryName
+        self.newCaseCell.detailTextLabel?.text = "\(covidOverview.newCase)명"
+        self.totalCaseCell.detailTextLabel?.text = "\(covidOverview.totalCase)명"
+        self.recoveredCell.detailTextLabel?.text = "\(covidOverview.recovered)명"
+        self.deathCell.detailTextLabel?.text = "\(covidOverview.death)명"
+        self.percentageCell.detailTextLabel?.text = "\(covidOverview.percentage)%"
+        self.overseasInflowCell.detailTextLabel?.text = "\(covidOverview.newFcase)"
+        self.regionalOutbreakCell.detailTextLabel?.text = "\(covidOverview.newCcase)"
     }
 }

@@ -13,12 +13,21 @@ import Charts
 class ViewController: UIViewController {
     @IBOutlet weak var totalCaseLabel: UILabel!
     @IBOutlet weak var newCaseLabel: UILabel!
+    @IBOutlet weak var indicatorView: UIActivityIndicatorView!
+    
     @IBOutlet weak var pieChartView: PieChartView!
+    @IBOutlet weak var labelStackView: UIStackView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.indicatorView.startAnimating() // 인디케이터 시작
         self.fetchCovidOverview(completionHandler: { [weak self] result in
             guard let self = self else { return }
+            self.indicatorView.stopAnimating()      // completionHandler가 호출되면 인디케이터는 정지되어야함
+            self.indicatorView.isHidden = true
+            self.pieChartView.isHidden = false
+            self.labelStackView.isHidden = false
             switch result {
             case let.success(result):
                 self.configureStackView(koreaCovidOverview: result.korea)
@@ -51,6 +60,7 @@ class ViewController: UIViewController {
     }
     
     func configureChartView(covidOverviewList: [CovidOverview]) {
+        self.pieChartView.delegate = self
         let entries = covidOverviewList.compactMap { [weak self] overview -> PieChartDataEntry? in
             guard let self = self else { return nil }
             return PieChartDataEntry(value: self.removeFormatString(string: overview.newCase), label: overview.countryName, data: overview)
@@ -119,3 +129,12 @@ class ViewController: UIViewController {
 
 }
 
+extension ViewController: ChartViewDelegate {
+    // 차트가 선택되었을 때 실행되는 메소드
+    func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
+        guard let covidDetailViewController = self.storyboard?.instantiateViewController(identifier: "CovidDetailViewController") as? CovidDetailViewController else { return }
+        guard let covidOverview = entry.data as? CovidOverview else { return }
+        covidDetailViewController.covidOverview = covidOverview
+        self.navigationController?.pushViewController(covidDetailViewController, animated: true)
+    }
+}
