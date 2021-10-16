@@ -9,6 +9,8 @@ import UIKit
 
 class BeerListViewController: UITableViewController {
     var beerList = [Beer]()
+    var currentPage = 1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,6 +21,8 @@ class BeerListViewController: UITableViewController {
         //UITableView 설정
         tableView.register(BeerListCell.self, forCellReuseIdentifier: "BeerListCell") // 셀 등록
         tableView.rowHeight = 150
+        
+        fetchBeer(of: currentPage)
     }
 }
 
@@ -45,5 +49,52 @@ extension BeerListViewController {
         
         detailViewController.beer = selectedBeer
         self.show(detailViewController, sender: nil)
+    }
+}
+
+//Data Fetching
+private extension BeerListViewController {
+    func fetchBeer(of page: Int) {
+        guard let url = URL(string: "https://api.punkapi.com/v2/beers?page=\(page)") else { return }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        
+        let dataTask = URLSession.shared.dataTask(with: request) {[weak self] data, response, error in
+            guard error == nil,
+                  let self = self,
+                  let response = response as? HTTPURLResponse,
+                  let data = data,
+                  let beers = try? JSONDecoder().decode([Beer].self, from: data) else {
+                      print("ERROR: URLSession data task \(error?.localizedDescription ?? "")")
+                      return
+            }
+            
+            switch response.statusCode {
+            case (200..<300):   //성공
+                self.beerList += beers
+                self.currentPage += 1       // 한 페이지를 보여줬으니 그 다음페이지를 보여주게끔 +1을 해줌
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            case (400..<500):   //클라이언트 에러
+                print("""
+                ERROR: Client ERROR \(response.statusCode)
+                Response: \(response)
+                """)
+            case (500..<600):   //서버 에러
+                print("""
+                ERROR: Client ERROR \(response.statusCode)
+                Response: \(response)
+                """)
+            default:
+                print("""
+                ERROR: Client ERROR \(response.statusCode)
+                Response: \(response)
+                """)
+            }
+        }
+        dataTask.resume()
     }
 }
