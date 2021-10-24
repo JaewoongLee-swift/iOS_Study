@@ -22,7 +22,8 @@ class TabBarController: UITabBarController {
     }()
     
     private lazy var appViewController: UIViewController = {
-        let viewController = TodayViewController()
+        // View 상단에 Embeded를 주기 위해 NavigationController로 설정
+        let viewController = UINavigationController(rootViewController: AppViewController())
         let tabBarItem = UITabBarItem(
             title: "앱",
             image: UIImage(systemName: "square.stack.3d.up"),
