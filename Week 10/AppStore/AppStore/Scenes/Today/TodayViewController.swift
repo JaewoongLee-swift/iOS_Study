@@ -85,4 +85,10 @@ extension TodayViewController: UICollectionViewDelegateFlowLayout {
         let value: CGFloat = 16.0
         return UIEdgeInsets(top: value, left: value, bottom: value, right: value)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = AppDetailViewController()
+        // viewController는 present 메소드를 가지고 있기 때문에 self. 를 생략 가능
+        present(vc, animated: true) // completion은 present가 완료됬을 때 어떤 액션을 넣을지. 옵셔널이고 넣을건 따로 없으니 제거
+    }
 }
