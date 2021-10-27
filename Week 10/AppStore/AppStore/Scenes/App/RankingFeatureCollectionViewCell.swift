@@ -9,6 +9,7 @@ import SnapKit
 import UIKit
 
 final class RankingFeatureCollectionViewCell: UICollectionViewCell {
+    
     static var height: CGFloat { 70.0 }
     
     private lazy var titleLabel: UILabel = {
@@ -56,12 +57,13 @@ final class RankingFeatureCollectionViewCell: UICollectionViewCell {
          return label
     }()
     
-    func setup() {
+    func setup(rankingFeature: RankingFeature) {
         setupViews()
         
-        titleLabel.text = "앱 이름"
-        descriptionLabel.text = "앱에 대한 설명란"
-        inAppPurchaseInfoLabel.isHidden = [true, false].randomElement() ?? true
+        titleLabel.text = rankingFeature.title
+        descriptionLabel.text = rankingFeature.description
+        // isInPurchaseApp가 true? 인앱구매 label이 나타나야함. 따라서 isHidden값은 false가 되야함. 따라서 반대되는 Bool값을 위해 '!'
+        inAppPurchaseInfoLabel.isHidden = !rankingFeature.isInPurchaseApp
     }
 }
 private extension RankingFeatureCollectionViewCell {

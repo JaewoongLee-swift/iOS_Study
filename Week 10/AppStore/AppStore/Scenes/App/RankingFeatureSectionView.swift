@@ -10,6 +10,7 @@ import UIKit
 import SwiftUI
 
 final class RankingFeatureSectionView: UIView {
+    private var rankingFeatureList: [RankingFeature] = []
     
     private lazy var titleLabel: UILabel = {
        let label = UILabel()
@@ -60,6 +61,9 @@ final class RankingFeatureSectionView: UIView {
         super.init(frame: frame)
         
         setupViews()
+        fetchData()
+        // setupView()는 텅텅 빈 배열을 기준으로 그려졌기 때문에 우리가 가져온 값을 제대로 표현하고 있지 않음. 따라서 CollectionView를 다시 그려줘야함
+        collectionView.reloadData()
     }
     
     required init?(coder: NSCoder) {
@@ -76,7 +80,7 @@ extension RankingFeatureSectionView: UICollectionViewDelegateFlowLayout {
 
 extension RankingFeatureSectionView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        9
+        rankingFeatureList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -85,13 +89,15 @@ extension RankingFeatureSectionView: UICollectionViewDataSource {
             for: indexPath
         ) as? RankingFeatureCollectionViewCell
         
-        cell?.setup()
+        let rankingFeature = rankingFeatureList[indexPath.item]
+        cell?.setup(rankingFeature: rankingFeature)
         
         return cell ?? UICollectionViewCell()
     }
     
 }
 
+//MARK: Private Method
 extension RankingFeatureSectionView {
     func setupViews() {
         [
@@ -127,6 +133,15 @@ extension RankingFeatureSectionView {
             $0.bottom.equalToSuperview()
         }
         
+    }
+    
+    func fetchData() {
+        guard let url = Bundle.main.url(forResource: "RankingFeature", withExtension: "plist") else { return }
+        do {
+            let data = try Data(contentsOf: url)
+            let result = try PropertyListDecoder().decode([RankingFeature].self, from: data)
+            self.rankingFeatureList = result
+        } catch {}
     }
 }
 

@@ -6,6 +6,7 @@
 //
 
 import SnapKit
+import Kingfisher
 import UIKit
 
 final class FeatureSectionCollectionViewCell: UICollectionViewCell {
@@ -39,19 +40,22 @@ final class FeatureSectionCollectionViewCell: UICollectionViewCell {
         imageView.layer.borderWidth = 0.5
         imageView.layer.borderColor = UIColor.separator.cgColor
         imageView.clipsToBounds = true
-        imageView.contentMode = .scaleAspectFit
+        imageView.contentMode = .scaleAspectFill
         
         
         return imageView
     }()
     
-    func setup() {
+    func setup(feature: Feature) {
         setupLayout()
         
-        typeLabel.text = "typeLabel"
-        appNameLabel.text = "appNameLabel"
-        descriptionLabel.text = "descriptionLabel"
-        imageView.backgroundColor = .yellow
+        typeLabel.text = feature.type
+        appNameLabel.text = feature.appName
+        descriptionLabel.text = feature.description
+        
+        if let imageURL = URL(string: feature.imageURL) {
+            imageView.kf.setImage(with: imageURL)
+        }
     }
 }
 

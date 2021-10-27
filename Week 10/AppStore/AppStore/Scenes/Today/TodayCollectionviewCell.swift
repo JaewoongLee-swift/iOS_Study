@@ -6,10 +6,11 @@
 //
 
 import SnapKit
+import Kingfisher
 import UIKit
 
 final class TodayCollectionViewCell: UICollectionViewCell {
-    lazy var titleLabel: UILabel = {
+    private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 24, weight: .bold)
         label.textColor = .white
@@ -17,7 +18,7 @@ final class TodayCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    lazy var subTitleLabel: UILabel = {
+    private lazy var subTitleLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 14, weight: .bold)
         label.textColor = .white
@@ -25,7 +26,7 @@ final class TodayCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    lazy var descriptionLabel: UILabel = {
+    private lazy var descriptionLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 14, weight: .bold)
         label.textColor = .white
@@ -35,7 +36,9 @@ final class TodayCollectionViewCell: UICollectionViewCell {
     
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
+        // contentMode.scaleAspectFill : view에 꽉차도록 content가 들어감
+        // contentMode.scaleAspectFit : view에 들어갈 수 있도록 aspect ratio를 유지하면서 크기를 조절함
+        imageView.contentMode = .scaleAspectFill    // 꽉 채울것이니 scaleAspectFill
         imageView.clipsToBounds = true              // 이미지뷰가 셀의 크기보다 클 경우 잘라넣기 위함.
         imageView.layer.cornerRadius = 12.0
         imageView.backgroundColor = .gray
@@ -43,7 +46,7 @@ final class TodayCollectionViewCell: UICollectionViewCell {
         return imageView
     }()
     
-    func setup() {
+    func setup(today: Today) {
         setupSubViews()
         
         // 그림자 설정. 그림자는 셀 자체에서 구현 필요
@@ -51,9 +54,13 @@ final class TodayCollectionViewCell: UICollectionViewCell {
         layer.shadowOpacity = 0.3
         layer.shadowRadius = 10
         
-        subTitleLabel.text = "subTitle"
-        descriptionLabel.text = "description"
-        titleLabel.text = "titleLabel"
+        titleLabel.text = today.title
+        subTitleLabel.text = today.subTitle
+        descriptionLabel.text = today.description
+        
+        if let imageURL = URL(string: today.imageURL) {
+            imageView.kf.setImage(with: imageURL)
+        }
     }
 }
 

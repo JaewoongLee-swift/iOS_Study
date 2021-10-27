@@ -6,9 +6,11 @@
 //
 
 import SnapKit
+import Kingfisher
 import UIKit
 
 final class AppDetailViewController: UIViewController {
+    private let today: Today
     
     private let appIconImageView: UIImageView = {
         let imageView = UIImageView()
@@ -59,6 +61,16 @@ final class AppDetailViewController: UIViewController {
         return button
     }()
     
+    init(today: Today) {
+        self.today = today
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -67,8 +79,8 @@ final class AppDetailViewController: UIViewController {
         
         setupViews()
         appIconImageView.backgroundColor = .lightGray
-        titleLabel.text = "앱 제목"
-        subTitleLabel.text = "앱 부제목"
+        titleLabel.text = today.title
+        subTitleLabel.text = today.subTitle
     }
 }
 
