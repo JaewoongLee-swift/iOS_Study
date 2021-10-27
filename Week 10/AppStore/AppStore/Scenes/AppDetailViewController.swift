@@ -57,6 +57,7 @@ final class AppDetailViewController: UIViewController {
         
         button.setImage(UIImage(systemName: "square.and.arrow.up"), for: .normal)
         button.tintColor = .systemBlue
+        button.addTarget(self, action: #selector(didTapShareButton), for: .touchUpInside)
         
         return button
     }()
@@ -129,4 +130,11 @@ private extension AppDetailViewController {
         }
     }
     
+    // addTarget 메소드의 파라미터, action의 Selector는 objective-C의 함수를 이용해야 함
+    @objc func didTapShareButton() {
+        let activityItems: [Any] = [today.title]
+        let activityViewController = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
+        
+        present(activityViewController, animated: true, completion: nil)
+    }
 }
