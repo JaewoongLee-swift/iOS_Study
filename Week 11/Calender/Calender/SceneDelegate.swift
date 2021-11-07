@@ -16,10 +16,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: windowScene)
-        let rootViewController = CalenderViewController()
-        let rootNavigationController = UINavigationController(rootViewController: rootViewController)
+//        let rootViewController = CalenderViewController()
+//        let rootNavigationController = UINavigationController(rootViewController: rootViewController)
         
-        self.window?.rootViewController = rootNavigationController
+        self.window?.rootViewController = CalenderViewController()
         window?.makeKeyAndVisible()
     }
 }
