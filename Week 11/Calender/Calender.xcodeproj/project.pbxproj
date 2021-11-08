@@ -15,6 +15,7 @@
 		9D7357252736186B001B0CEB /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9D7357242736186B001B0CEB /* SnapKit */; };
 		9D7357272737F121001B0CEB /* CalenderCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7357262737F120001B0CEB /* CalenderCollectionHeaderView.swift */; };
 		9D7357292737F185001B0CEB /* CalenderCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7357282737F185001B0CEB /* CalenderCollectionCell.swift */; };
+		9D73572B2739482A001B0CEB /* Calender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D73572A2739482A001B0CEB /* Calender.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		9D73572127351F24001B0CEB /* CalenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
 		9D7357262737F120001B0CEB /* CalenderCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderCollectionHeaderView.swift; sourceTree = "<group>"; };
 		9D7357282737F185001B0CEB /* CalenderCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderCollectionCell.swift; sourceTree = "<group>"; };
+		9D73572A2739482A001B0CEB /* Calender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calender.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				9D73572127351F24001B0CEB /* CalenderViewController.swift */,
 				9D7357262737F120001B0CEB /* CalenderCollectionHeaderView.swift */,
 				9D7357282737F185001B0CEB /* CalenderCollectionCell.swift */,
+				9D73572A2739482A001B0CEB /* Calender.swift */,
 				9D7357162735133B001B0CEB /* Assets.xcassets */,
 				9D7357182735133B001B0CEB /* LaunchScreen.storyboard */,
 				9D73571B2735133B001B0CEB /* Info.plist */,
@@ -153,6 +156,7 @@
 				9D73570E27351337001B0CEB /* AppDelegate.swift in Sources */,
 				9D73571027351337001B0CEB /* SceneDelegate.swift in Sources */,
 				9D7357272737F121001B0CEB /* CalenderCollectionHeaderView.swift in Sources */,
+				9D73572B2739482A001B0CEB /* Calender.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
