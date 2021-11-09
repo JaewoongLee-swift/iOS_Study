@@ -12,7 +12,6 @@ final class CalenderCollectionHeaderView: UICollectionReusableView {
     
     lazy var headerLabel: UILabel = {
         let label = UILabel()
-        label.text = "2021년11월"
         label.font = .systemFont(ofSize: 20, weight: .medium)
         
         return label
@@ -22,7 +21,6 @@ final class CalenderCollectionHeaderView: UICollectionReusableView {
        let button = UIButton()
         button.setTitle("next", for: .normal)
         button.setTitleColor(.systemBlue, for: .normal)
-        button.addTarget(self, action: #selector(didTapNextButton), for: .touchUpInside)
         
         return button
     }()
@@ -31,13 +29,11 @@ final class CalenderCollectionHeaderView: UICollectionReusableView {
        let button = UIButton()
         button.setTitle("prev", for: .normal)
         button.setTitleColor(.systemBlue, for: .normal)
-        button.addTarget(self, action: #selector(didTapPrevButton), for: .touchUpInside)
-        
         
         return button
     }()
     
-    func setupViews() {
+    func setupViews(Calendar: Calender) {
         [headerLabel, nextButton, previousButton].forEach{
             addSubview($0)
         }
@@ -60,16 +56,7 @@ final class CalenderCollectionHeaderView: UICollectionReusableView {
             $0.centerX.equalToSuperview()
             $0.bottom.equalTo(previousButton.snp.bottom)
         }
-    }
-}
-
-extension CalenderCollectionHeaderView {
-    @objc func didTapPrevButton() {
-        print("Prev버튼 눌림")
         
-    }
-    
-    @objc func didTapNextButton() {
-        print("Next버튼 눌림")
+        headerLabel.text = Calendar.yearMonthLabel
     }
 }

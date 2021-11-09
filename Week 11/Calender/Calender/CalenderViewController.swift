@@ -9,6 +9,7 @@ import UIKit
 import SnapKit
 
 class CalenderViewController: UIViewController {
+    lazy var calender = Calender()
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -34,6 +35,7 @@ class CalenderViewController: UIViewController {
         collectionView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
+        calender.setupCalendar()
     }
 }
 
@@ -56,19 +58,23 @@ extension CalenderViewController: UICollectionViewDelegateFlowLayout {
 
 extension CalenderViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        switch section {
-//        case 0:
-//            return 7 // 월 화 수 목 금 토 일
-//        default:
-//            return ?? // 월 별 일 수
-//        }
-        return 7
+
+        return calender.days.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CalenderCollectionCell", for: indexPath) as? CalenderCollectionCell
         
         cell?.setupSubViews()
+        cell?.dataLabel.text = calender.days[indexPath.row]
+        
+        if indexPath.row % 7 == 0 {
+            cell?.dataLabel.textColor = .red
+        } else if indexPath.row % 7 == 6 {
+            cell?.dataLabel.textColor = .blue
+        } else {
+            cell?.dataLabel.textColor = .black
+        }
         
         return cell ?? UICollectionViewCell()
     }
@@ -82,9 +88,29 @@ extension CalenderViewController: UICollectionViewDataSource {
               ) as? CalenderCollectionHeaderView
         else { return UICollectionReusableView() }
         
-        header.setupViews()
+        header.previousButton.addTarget(self, action: #selector(didTapPrevButton), for: .touchUpInside)
+        header.nextButton.addTarget(self, action: #selector(didTapNextButton), for: .touchUpInside)
+        header.setupViews(Calendar: calender)
         
         return header
     }
     
+}
+
+extension CalenderViewController {
+    @objc func didTapPrevButton() {
+        if let month = self.calender.components.month {
+            self.calender.components.month = month - 1
+        }
+        self.calender.calculation()
+        self.collectionView.reloadData()
+    }
+    
+    @objc func didTapNextButton() {
+        if let month = self.calender.components.month {
+            self.calender.components.month = month + 1
+        }
+        self.calender.calculation()
+        self.collectionView.reloadData()
+    }
 }
