@@ -15,6 +15,7 @@ class StationSearchViewController: UIViewController {
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.isHidden = true
         
         return tableView
@@ -53,6 +54,8 @@ extension StationSearchViewController: UISearchBarDelegate {
     // 테이블뷰가 나타날 시기 : 서치바에 입력이 된 후, 검색결과가 나타날 시기 : 입력이 완료된 후
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
         numberOfCell = 10
+        // 셀의 개수가 초기화 됬으므로 테이블뷰를 다시 리로드해줘야 나타남.
+        tableView.reloadData()
         tableView.isHidden = false
     }
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
@@ -72,5 +75,12 @@ extension StationSearchViewController: UITableViewDataSource {
         cell.textLabel?.text = "\(indexPath.row)"
         
         return cell
+    }
+}
+
+extension StationSearchViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let viewcontroller = StationDetailViewController()
+        navigationController?.pushViewController(viewcontroller, animated: true)
     }
 }
