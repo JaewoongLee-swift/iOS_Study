@@ -5,6 +5,7 @@
 //  Created by 이재웅 on 2021/11/16.
 //
 
+import Alamofire
 import SnapKit
 import UIKit
 
@@ -16,12 +17,6 @@ final class StationDetailViewController: UIViewController {
         
         return refreshControl
     }()
-    
-    @objc func fetchData() {
-        print("REFRESH !")
-        // refreshControl 종료
-        refreshControl.endRefreshing()
-    }
     
     private lazy var collectionView: UICollectionView = {
        let layout = UICollectionViewFlowLayout()
@@ -48,6 +43,7 @@ final class StationDetailViewController: UIViewController {
         return collectionView
     }()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -55,6 +51,27 @@ final class StationDetailViewController: UIViewController {
         
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints { $0.edges.equalToSuperview() }
+        
+        fetchData()
+    }
+    
+    @objc private func fetchData() {
+        // refreshControl 종료
+//        refreshControl.endRefreshing()
+        
+        // api 주소가 '~~역'으로 이루어져 있고 '서울' 또는 '왕십리' 같이 지명으로만 이루어져 있음. 따라서 '서울역'으로 지하철역의 이름을 통째로 받되 '역'을 지우는 메소드를 사용 (replacingOccurrences)
+        let stationName = "서울역"
+        let urlString = "http://swopenapi.seoul.go.kr/api/subway/sample/json/realtimeStationArrival/0/5/\(stationName.replacingOccurrences(of: "역", with: ""))"
+        AF
+            .request(urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "")
+            .responseDecodable(of: StationArrivalDatResponseModel.self) { [weak self] response in
+                // refreshControl이 멈춰야 할 타이밍은 서버의 request가 완료되고 뷰를 그려야할 시점. guard문 아래에 endRefreshing()을 사용하면 request가 성공했을 시에만 refreshControl가 멈추기 때문에 그 전에 decoding을 일단 요청할 때 멈춰야 함.
+                self?.refreshControl.endRefreshing()
+                guard case .success(let data) = response.result else { return }
+                
+                print(data.realtimeArrivalList)
+            }
+            .resume()
     }
 }
 
@@ -72,6 +89,4 @@ extension StationDetailViewController: UICollectionViewDataSource {
         cell?.setup()
         return cell ?? UICollectionViewCell()
     }
-    
-    
 }

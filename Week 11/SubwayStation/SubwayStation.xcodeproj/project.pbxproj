@@ -16,6 +16,8 @@
 		9D735751273E0603001B0CEB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9D735750273E0603001B0CEB /* Alamofire */; };
 		9D7357532743D2A4001B0CEB /* StationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7357522743D2A3001B0CEB /* StationDetailViewController.swift */; };
 		9D7357552743DBE3001B0CEB /* StationDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7357542743DBE2001B0CEB /* StationDetailCollectionViewCell.swift */; };
+		9D8347672744E67E00F50A1C /* StationResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8347662744E67E00F50A1C /* StationResponseModel.swift */; };
+		9D8347692744FFCD00F50A1C /* StationArrivalDatResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8347682744FFCD00F50A1C /* StationArrivalDatResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		9D735746273E034F001B0CEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D7357522743D2A3001B0CEB /* StationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetailViewController.swift; sourceTree = "<group>"; };
 		9D7357542743DBE2001B0CEB /* StationDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		9D8347662744E67E00F50A1C /* StationResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationResponseModel.swift; sourceTree = "<group>"; };
+		9D8347682744FFCD00F50A1C /* StationArrivalDatResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationArrivalDatResponseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 			children = (
 				9D735738273E0347001B0CEB /* AppDelegate.swift */,
 				9D73573A273E0347001B0CEB /* SceneDelegate.swift */,
+				9D8347662744E67E00F50A1C /* StationResponseModel.swift */,
+				9D8347682744FFCD00F50A1C /* StationArrivalDatResponseModel.swift */,
 				9D7357562743E535001B0CEB /* Scenes */,
 				9D735741273E034F001B0CEB /* Assets.xcassets */,
 				9D735743273E034F001B0CEB /* LaunchScreen.storyboard */,
@@ -161,6 +167,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D7357532743D2A4001B0CEB /* StationDetailViewController.swift in Sources */,
+				9D8347692744FFCD00F50A1C /* StationArrivalDatResponseModel.swift in Sources */,
+				9D8347672744E67E00F50A1C /* StationResponseModel.swift in Sources */,
 				9D73573D273E0347001B0CEB /* StationSearchViewController.swift in Sources */,
 				9D735739273E0347001B0CEB /* AppDelegate.swift in Sources */,
 				9D73573B273E0347001B0CEB /* SceneDelegate.swift in Sources */,

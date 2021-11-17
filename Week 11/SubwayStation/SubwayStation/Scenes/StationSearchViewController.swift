@@ -5,6 +5,7 @@
 //  Created by 이재웅 on 2021/11/12.
 //
 
+import Alamofire
 import UIKit
 import SnapKit
 
@@ -26,6 +27,8 @@ class StationSearchViewController: UIViewController {
         
         setNavigationItems()
         setTableViewLayout()
+        
+        requestStationName()
     }
     
     private func setNavigationItems() {
@@ -46,6 +49,21 @@ class StationSearchViewController: UIViewController {
         tableView.snp.makeConstraints { $0.edges.equalToSuperview() }
     }
 
+    private func requestStationName() {
+        // json으로 받음
+        let urlString = "http://openAPI.seoul.go.kr:8088/sample/json/SearchInfoBySubwayNameService/1/5/서울역"
+        
+        // .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "" : urlString 주소의 한글은 url을 요청할 때 깨져서 들어가게 됨. 따라서 그것을 방지하기 위한 메소드
+        AF
+            .request(urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "")
+            .responseDecodable(of: StationResponseModel.self) { response in
+                // response.result는 성공/실패를 모두 불러오기 때문에 guard문을 통해 우리에게 필요한 성공했을 때의 결과값만을 불러오도록 함
+                guard case .success(let data) = response.result else { return }
+                
+                print(data.stations)
+            }
+            .resume()
+    }
 
 }
 
