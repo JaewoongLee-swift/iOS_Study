@@ -24,9 +24,9 @@ class StationDetailCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    func setup() {
-        lineLabel.text = "원주행 - 안동방면"
-        remainTimeLabel.text = "곧 도착"
+    func setup(with realTimeArrival: StationArrivalDatResponseModel.RealTimeArrival) {
+        lineLabel.text = realTimeArrival.line
+        remainTimeLabel.text = realTimeArrival.remainTime
         
         layer.cornerRadius = 12.0
         layer.shadowColor = UIColor.black.cgColor
