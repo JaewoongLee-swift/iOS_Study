@@ -32,7 +32,7 @@ class Calender {
     func calculation() {
         guard let firstDayOfMonth = cal.date(from: components) else { return }
         
-        // 해당 수로 반환됨. 1 = 월요일, 7 = 토요일
+        // 해당 수로 반환됨. 1 = 일요일, 7 = 토요일
         let firstWeekday = cal.component(.weekday, from: firstDayOfMonth)
         daysCountInMonth = cal.range(of: .day, in: .month, for: firstDayOfMonth)!.count
         weekdayAdding = 2 - firstWeekday
