@@ -17,7 +17,7 @@ final class TabBarController: UITabBarController {
         // 선택하지 않았을 때랑 선택 되었을 때 구분할 수 있는 메소드
         feedViewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill"))
         
-        let profileViewController = UIViewController()
+        let profileViewController = UINavigationController(rootViewController: ProfileViewController())
         profileViewController.tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "person"), selectedImage: UIImage(systemName: "person.fill"))
         
         viewControllers = [feedViewController, profileViewController]

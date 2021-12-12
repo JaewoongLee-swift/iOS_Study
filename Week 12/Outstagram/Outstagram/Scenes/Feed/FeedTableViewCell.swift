@@ -20,6 +20,7 @@ final class FeedTableViewCell: UITableViewCell {
     private lazy var likeButton: UIButton = {
         let button = UIButton()
         button.setImage(systemName: "heart")
+//        button.setImage(UIImage(systemName: "heart"), for: .normal)
         
         return button
     }()
@@ -27,6 +28,7 @@ final class FeedTableViewCell: UITableViewCell {
     private lazy var commentButton: UIButton = {
         let button = UIButton()
         button.setImage(systemName: "message")
+//        button.setImage(UIImage(systemName: "message"), for: .normal)
         
         return button
     }()
@@ -34,6 +36,7 @@ final class FeedTableViewCell: UITableViewCell {
     private lazy var directMessegeButton: UIButton = {
         let button = UIButton()
         button.setImage(systemName: "paperplane")
+//        button.setImage(UIImage(systemName: "paperplane"), for: .normal)
         
         return button
     }()

@@ -16,6 +16,8 @@
 		9D84D3F9276228C900B98CD9 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D84D3F8276228C900B98CD9 /* TabBarController.swift */; };
 		9D84D3FC2762568D00B98CD9 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D84D3FB2762568C00B98CD9 /* FeedTableViewCell.swift */; };
 		9D84D3FE276264E100B98CD9 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D84D3FD276264E100B98CD9 /* UIButton+.swift */; };
+		9DE4C06D276660640052CCCB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE4C06C276660640052CCCB /* ProfileViewController.swift */; };
+		9DE4C07127666B460052CCCB /* ProfileDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE4C07027666B460052CCCB /* ProfileDataView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		9D84D3F8276228C900B98CD9 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		9D84D3FB2762568C00B98CD9 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		9D84D3FD276264E100B98CD9 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
+		9DE4C06C276660640052CCCB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		9DE4C07027666B460052CCCB /* ProfileDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,11 +80,29 @@
 		9D84D3FA276228D100B98CD9 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				9D84D3E52762271200B98CD9 /* FeedViewController.swift */,
-				9D84D3FB2762568C00B98CD9 /* FeedTableViewCell.swift */,
 				9D84D3F8276228C900B98CD9 /* TabBarController.swift */,
+				9DE4C06E276661D90052CCCB /* Feed */,
+				9DE4C06F276661E70052CCCB /* Profile */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		9DE4C06E276661D90052CCCB /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				9D84D3E52762271200B98CD9 /* FeedViewController.swift */,
+				9D84D3FB2762568C00B98CD9 /* FeedTableViewCell.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		9DE4C06F276661E70052CCCB /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				9DE4C06C276660640052CCCB /* ProfileViewController.swift */,
+				9DE4C07027666B460052CCCB /* ProfileDataView.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,9 +183,11 @@
 			files = (
 				9D84D3E62762271200B98CD9 /* FeedViewController.swift in Sources */,
 				9D84D3FE276264E100B98CD9 /* UIButton+.swift in Sources */,
+				9DE4C06D276660640052CCCB /* ProfileViewController.swift in Sources */,
 				9D84D3F9276228C900B98CD9 /* TabBarController.swift in Sources */,
 				9D84D3E22762271200B98CD9 /* AppDelegate.swift in Sources */,
 				9D84D3E42762271200B98CD9 /* SceneDelegate.swift in Sources */,
+				9DE4C07127666B460052CCCB /* ProfileDataView.swift in Sources */,
 				9D84D3FC2762568D00B98CD9 /* FeedTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

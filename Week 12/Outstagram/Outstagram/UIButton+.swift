@@ -14,7 +14,6 @@ extension UIButton {
         contentVerticalAlignment = .fill
         
         imageView?.contentMode = .scaleAspectFit
-        imageEdgeInsets = .zero
         
         setImage(UIImage(systemName: systemName), for: .normal)
     }
