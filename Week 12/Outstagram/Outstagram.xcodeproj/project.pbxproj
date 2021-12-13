@@ -16,6 +16,7 @@
 		9D84D3F9276228C900B98CD9 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D84D3F8276228C900B98CD9 /* TabBarController.swift */; };
 		9D84D3FC2762568D00B98CD9 /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D84D3FB2762568C00B98CD9 /* FeedTableViewCell.swift */; };
 		9D84D3FE276264E100B98CD9 /* UIButton+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D84D3FD276264E100B98CD9 /* UIButton+.swift */; };
+		9D9FDE01276775CF00415331 /* ProfileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9FDE00276775CF00415331 /* ProfileCollectionViewCell.swift */; };
 		9DE4C06D276660640052CCCB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE4C06C276660640052CCCB /* ProfileViewController.swift */; };
 		9DE4C07127666B460052CCCB /* ProfileDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE4C07027666B460052CCCB /* ProfileDataView.swift */; };
 /* End PBXBuildFile section */
@@ -31,6 +32,7 @@
 		9D84D3F8276228C900B98CD9 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		9D84D3FB2762568C00B98CD9 /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
 		9D84D3FD276264E100B98CD9 /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
+		9D9FDE00276775CF00415331 /* ProfileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCollectionViewCell.swift; sourceTree = "<group>"; };
 		9DE4C06C276660640052CCCB /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9DE4C07027666B460052CCCB /* ProfileDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				9DE4C06C276660640052CCCB /* ProfileViewController.swift */,
+				9D9FDE00276775CF00415331 /* ProfileCollectionViewCell.swift */,
 				9DE4C07027666B460052CCCB /* ProfileDataView.swift */,
 			);
 			path = Profile;
@@ -182,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D84D3E62762271200B98CD9 /* FeedViewController.swift in Sources */,
+				9D9FDE01276775CF00415331 /* ProfileCollectionViewCell.swift in Sources */,
 				9D84D3FE276264E100B98CD9 /* UIButton+.swift in Sources */,
 				9DE4C06D276660640052CCCB /* ProfileViewController.swift in Sources */,
 				9D84D3F9276228C900B98CD9 /* TabBarController.swift in Sources */,
