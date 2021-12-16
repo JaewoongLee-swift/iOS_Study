@@ -126,7 +126,7 @@ private extension ProfileViewController {
     }
     
     @objc func didTapRightBarButtonItem() {
-        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let actionSheet = UIAlertController(title: "타이틀", message: "메세지는 어떻게 나타날까?", preferredStyle: .alert)
         // handler: 버튼이 눌러졌을 경우 하는 행동
         [
         UIAlertAction(title: "회원 정보 변경", style: .default),
