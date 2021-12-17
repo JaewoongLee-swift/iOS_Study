@@ -58,7 +58,7 @@ extension FeedViewController: UIImagePickerControllerDelegate, UINavigationContr
     // 이미지가 선택된 후 실행하는 함수
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         var selectImage: UIImage?
-        
+
         // info는 dictionary 형태
         if let editedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage{
             selectImage = editedImage
@@ -66,14 +66,13 @@ extension FeedViewController: UIImagePickerControllerDelegate, UINavigationContr
             selectImage = originImage
         }
         
-        print(selectImage)
         // didFinishPickingMediaWithInfo 함수를 사용할땐 이미지를 선택했을 때 컨트롤러가 사라지는걸 직접 설정해줘야함
         picker.dismiss(animated: true) {[weak self] in
             // 새롭게 나타나는 컨트롤러를 위해선 completion을 사용
-            let uploadViewController = UploadViewController()
+            let uploadViewController = UploadViewController(uploadImage: selectImage ?? UIImage())
             let navigationController = UINavigationController(rootViewController: uploadViewController)
             navigationController.modalPresentationStyle = .fullScreen
-            
+
             self?.present(navigationController, animated: true)
         }
     }
