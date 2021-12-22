@@ -15,7 +15,6 @@ final class UploadViewController: UIViewController {
     
     private lazy var textView: UITextView = {
         let textView = UITextView()
-        textView.font = .systemFont(ofSize: 15.0)
         textView.text = "문구 입력..."
         textView.textColor = .secondaryLabel
         textView.font = .systemFont(ofSize: 15.0)
