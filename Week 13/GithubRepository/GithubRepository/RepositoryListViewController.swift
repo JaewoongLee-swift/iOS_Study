@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 
 class RepositoryListViewController: UITableViewController {
-    private let organization = "Apple"
+    private let organization = "ReactiveX"
     // 기존에는 다음과 같이 swift의 sequence를 사용해옴
 //    private let reposiotories = [Repository]
     // 이젠 RxSwift를 이용해 받아볼것
@@ -35,7 +35,10 @@ class RepositoryListViewController: UITableViewController {
     }
     
     @objc func refresh() {
-        
+        DispatchQueue.global(qos: .background).async { [weak self] in
+            guard let self = self else { return }
+            self.fetchRepositoriees(of: self.organization)
+        }
     }
     
     func fetchRepositoriees(of organization: String) {
@@ -68,7 +71,7 @@ class RepositoryListViewController: UITableViewController {
                     guard let id = dic["id"] as? Int,
                           let name = dic["name"] as? String,
                           let description = dic["description"] as? String,
-                          let stargazersCount = dic["stargazersCount"] as? Int,
+                          let stargazersCount = dic["stargazers_count"] as? Int,
                           let language = dic["language"] as? String else { return nil }
                     return Repository(id: id, name: name, description: description, stargazersCount: stargazersCount, language: language)
                 }
@@ -88,11 +91,26 @@ class RepositoryListViewController: UITableViewController {
 //UITableView DataSource Delegate
 extension RepositoryListViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        0
+        do {
+            // repository의 개수만큼 테이블뷰 row의 수가 될것임
+            return try repositoires.value().count
+        } catch {
+            return 0
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "RepositoryListCell", for: indexPath) as? RepositoryListCell else { return UITableViewCell() }
+        
+        var currentRepo: Repository? {
+            do {
+                return try repositoires.value()[indexPath.row]
+            } catch {
+                return nil
+            }
+        }
+        
+        cell.repository = currentRepo
             
             return cell
     }
