@@ -29,6 +29,7 @@
 		9D7357262737F120001B0CEB /* CalenderCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderCollectionHeaderView.swift; sourceTree = "<group>"; };
 		9D7357282737F185001B0CEB /* CalenderCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderCollectionCell.swift; sourceTree = "<group>"; };
 		9D73572A2739482A001B0CEB /* Calender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calender.swift; sourceTree = "<group>"; };
+		9DA405CC27905C2600FD7C7B /* CalenderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,15 +65,40 @@
 			children = (
 				9D73570D27351337001B0CEB /* AppDelegate.swift */,
 				9D73570F27351337001B0CEB /* SceneDelegate.swift */,
-				9D73572127351F24001B0CEB /* CalenderViewController.swift */,
-				9D7357262737F120001B0CEB /* CalenderCollectionHeaderView.swift */,
-				9D7357282737F185001B0CEB /* CalenderCollectionCell.swift */,
+				9DA405C127905B9000FD7C7B /* Calendar */,
 				9D73572A2739482A001B0CEB /* Calender.swift */,
 				9D7357162735133B001B0CEB /* Assets.xcassets */,
 				9D7357182735133B001B0CEB /* LaunchScreen.storyboard */,
 				9D73571B2735133B001B0CEB /* Info.plist */,
 			);
 			path = Calender;
+			sourceTree = "<group>";
+		};
+		9DA405C127905B9000FD7C7B /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				9D73572127351F24001B0CEB /* CalenderViewController.swift */,
+				9DA405C227905BA200FD7C7B /* CalendarCollection */,
+				9DA405CB27905C1900FD7C7B /* CalendarTable */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		9DA405C227905BA200FD7C7B /* CalendarCollection */ = {
+			isa = PBXGroup;
+			children = (
+				9D7357262737F120001B0CEB /* CalenderCollectionHeaderView.swift */,
+				9D7357282737F185001B0CEB /* CalenderCollectionCell.swift */,
+			);
+			path = CalendarCollection;
+			sourceTree = "<group>";
+		};
+		9DA405CB27905C1900FD7C7B /* CalendarTable */ = {
+			isa = PBXGroup;
+			children = (
+				9DA405CC27905C2600FD7C7B /* CalenderTableViewCell.swift */,
+			);
+			path = CalendarTable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

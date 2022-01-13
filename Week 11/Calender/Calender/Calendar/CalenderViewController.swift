@@ -26,15 +26,22 @@ class CalenderViewController: UIViewController {
         return collectionView
     }()
     
+    lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+//        tableView.register(CalenderTal, forCellReuseIdentifier: <#T##String#>)
+        
+        return tableView
+    }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.addSubview(collectionView)
+        setupView()
         
-        collectionView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
-        }
         calender.setupCalendar()
     }
 }
@@ -97,6 +104,24 @@ extension CalenderViewController: UICollectionViewDataSource {
     
 }
 
+extension CalenderViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("tableview is selected: number \(indexPath.row)")
+    }
+}
+
+extension CalenderViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        
+        return cell
+    }
+}
+
 extension CalenderViewController {
     @objc func didTapPrevButton() {
         if let month = self.calender.components.month {
@@ -112,5 +137,24 @@ extension CalenderViewController {
         }
         self.calender.calculation()
         self.collectionView.reloadData()
+    }
+    
+    func setupView() {
+        let height: CGFloat = ( UIScreen.main.bounds.size.width / 9 + 16) * 7 + 40.0
+        
+        [collectionView, tableView].forEach { view.addSubview($0) }
+        
+        collectionView.snp.makeConstraints {
+            $0.top.equalToSuperview()
+            $0.leading.equalToSuperview()
+            $0.trailing.equalToSuperview()
+            $0.height.equalTo(height)
+        }
+        
+        tableView.snp.makeConstraints{
+            $0.top.equalTo(collectionView.snp.bottom)
+            $0.trailing.leading.equalToSuperview()
+            $0.bottom.equalToSuperview()
+        }
     }
 }
