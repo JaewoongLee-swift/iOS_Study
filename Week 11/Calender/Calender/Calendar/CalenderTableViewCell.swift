@@ -23,20 +23,11 @@ class CalenderTableViewCell: UITableViewCell {
     
     lazy var exerciseHourLabel: UILabel = {
         let label = UILabel()
-        label.text = "\(startTime)시 ~ \(finishTime)"
+        label.text = "\(startTime)시 ~ \(finishTime)시"
         label.font = .systemFont(ofSize: 15.0, weight: .medium)
         
         return label
     }()
-    
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
-    }
-    
-    required init?(coder: NSCoder) {
-            fatalError("init(coder:) has not been implemented")
-        }
     
     func setSubViews() {
         [nameLabel, exerciseHourLabel].forEach{ addSubview($0) }

@@ -31,7 +31,7 @@ class CalenderViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-//        tableView.register(CalenderTal, forCellReuseIdentifier: <#T##String#>)
+        tableView.register(CalenderTableViewCell.self, forCellReuseIdentifier: "CalenderTableViewCell")
         
         return tableView
     }()
@@ -45,6 +45,10 @@ class CalenderViewController: UIViewController {
         calender.setupCalendar()
     }
 }
+
+//------------------------------------------------------------------------------------------
+// CollectionView Delegate
+//------------------------------------------------------------------------------------------
 
 extension CalenderViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -104,6 +108,10 @@ extension CalenderViewController: UICollectionViewDataSource {
     
 }
 
+//------------------------------------------------------------------------------------------
+// TableView Delegate
+//------------------------------------------------------------------------------------------
+
 extension CalenderViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("tableview is selected: number \(indexPath.row)")
@@ -116,11 +124,17 @@ extension CalenderViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CalenderTableViewCell", for: indexPath) as? CalenderTableViewCell else { return UITableViewCell() }
+        
+        cell.setSubViews()
         
         return cell
     }
 }
+
+//------------------------------------------------------------------------------------------
+// etc
+//------------------------------------------------------------------------------------------
 
 extension CalenderViewController {
     @objc func didTapPrevButton() {
