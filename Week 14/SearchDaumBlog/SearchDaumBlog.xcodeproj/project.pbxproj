@@ -14,6 +14,9 @@
 		9D54A16827955D6E00D55453 /* BlogListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D54A16727955D6E00D55453 /* BlogListCell.swift */; };
 		9D54A16A27955D7B00D55453 /* BlogListCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D54A16927955D7B00D55453 /* BlogListCellData.swift */; };
 		9D54A1732795676300D55453 /* AlertActionConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D54A1722795676300D55453 /* AlertActionConvertible.swift */; };
+		9D84E98427969CE1003910B3 /* DKBlog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D84E98327969CE1003910B3 /* DKBlog.swift */; };
+		9D84E9862796A25F003910B3 /* SearchBlogAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D84E9852796A25F003910B3 /* SearchBlogAPI.swift */; };
+		9D84E9892796A371003910B3 /* SearchBlogNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D84E9882796A371003910B3 /* SearchBlogNetwork.swift */; };
 		9DA27FC0279153D900BD91C2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA27FBF279153D900BD91C2 /* AppDelegate.swift */; };
 		9DA27FC2279153D900BD91C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA27FC1279153D900BD91C2 /* SceneDelegate.swift */; };
 		9DA27FC9279153DB00BD91C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DA27FC8279153DB00BD91C2 /* Assets.xcassets */; };
@@ -32,6 +35,9 @@
 		9D54A16727955D6E00D55453 /* BlogListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogListCell.swift; sourceTree = "<group>"; };
 		9D54A16927955D7B00D55453 /* BlogListCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogListCellData.swift; sourceTree = "<group>"; };
 		9D54A1722795676300D55453 /* AlertActionConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertActionConvertible.swift; sourceTree = "<group>"; };
+		9D84E98327969CE1003910B3 /* DKBlog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKBlog.swift; sourceTree = "<group>"; };
+		9D84E9852796A25F003910B3 /* SearchBlogAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBlogAPI.swift; sourceTree = "<group>"; };
+		9D84E9882796A371003910B3 /* SearchBlogNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBlogNetwork.swift; sourceTree = "<group>"; };
 		9DA27FBC279153D900BD91C2 /* SearchDaumBlog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchDaumBlog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DA27FBF279153D900BD91C2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DA27FC1279153D900BD91C2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +84,7 @@
 			children = (
 				9D54A16927955D7B00D55453 /* BlogListCellData.swift */,
 				9D54A1722795676300D55453 /* AlertActionConvertible.swift */,
+				9D84E98327969CE1003910B3 /* DKBlog.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -126,6 +133,15 @@
 			path = SubComponents;
 			sourceTree = "<group>";
 		};
+		9D84E9872796A278003910B3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9D84E9852796A25F003910B3 /* SearchBlogAPI.swift */,
+				9D84E9882796A371003910B3 /* SearchBlogNetwork.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		9DA27FB3279153D900BD91C2 = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +166,7 @@
 				9DA27FBF279153D900BD91C2 /* AppDelegate.swift */,
 				9DA27FC1279153D900BD91C2 /* SceneDelegate.swift */,
 				9D54A16C27955D9C00D55453 /* Entities */,
+				9D84E9872796A278003910B3 /* Network */,
 				9D54A16B27955D8E00D55453 /* Presentation */,
 				9DA27FC8279153DB00BD91C2 /* Assets.xcassets */,
 				9DA27FCA279153DB00BD91C2 /* LaunchScreen.storyboard */,
@@ -290,12 +307,15 @@
 			files = (
 				9DA27FDC2791B19200BD91C2 /* MainViewController.swift in Sources */,
 				9D54A16827955D6E00D55453 /* BlogListCell.swift in Sources */,
+				9D84E98427969CE1003910B3 /* DKBlog.swift in Sources */,
 				9D54A16627955D3000D55453 /* BlogList.swift in Sources */,
+				9D84E9862796A25F003910B3 /* SearchBlogAPI.swift in Sources */,
 				9D54A16A27955D7B00D55453 /* BlogListCellData.swift in Sources */,
 				9D54A1622795510100D55453 /* SearchBar.swift in Sources */,
 				9DA27FC0279153D900BD91C2 /* AppDelegate.swift in Sources */,
 				9D54A164279559B800D55453 /* FilterView.swift in Sources */,
 				9DA27FC2279153D900BD91C2 /* SceneDelegate.swift in Sources */,
+				9D84E9892796A371003910B3 /* SearchBlogNetwork.swift in Sources */,
 				9D54A1732795676300D55453 /* AlertActionConvertible.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

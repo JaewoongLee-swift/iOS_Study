@@ -9,7 +9,6 @@ import UIKit
 import RxSwift
 import RxCocoa
 import SnapKit
-import CoreMedia
 
 class MainViewController: UIViewController {
     let disposeBag = DisposeBag()

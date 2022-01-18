@@ -16,7 +16,8 @@ class SearchBar: UISearchBar {
     let searchButton = UIButton()
     
     //SearchBar 버튼 탭 이벤트
-    let searchButtonTapped = PublishRelay<Void>()       // PublishSubject를 wrapping하고 있지만 에러는 받지않고 onNext만 내보냄
+    let searchButtonTapped = PublishRelay<Void>()
+    // PublishRelay는 PublishSubject를 wrapping하고 있지만 에러는 받지않고 onNext만 내보냄
     // 버튼은 어떠한 값이 전달되진 않고 이벤트만 발생하기 때문에 Void
     
     //SearchBar 외부로 내보낼 이벤트
@@ -40,14 +41,18 @@ class SearchBar: UISearchBar {
         
         Observable
             .merge(
+                // 아이폰 UI키보드의 '검색'버튼이 눌렸을때의 이벤트
                 self.rx.searchButtonClicked.asObservable(),
+                // 새로 선언한 searchButton
                 searchButton.rx.tap.asObservable()
             )
             .bind(to: searchButtonTapped)
             .disposed(by: disposeBag)
         
         searchButtonTapped
+        // signal로 만들어서 구독한 이후의 값을 방출
             .asSignal()
+        // Rx extension으로 커스텀한 endEditing 이벤트 생성
             .emit(to: self.rx.endEditing)
             .disposed(by: disposeBag)
         
