@@ -25,8 +25,6 @@ class SearchBlogNetwork {
         self.session = session
     }
     
-    
-    
     //네트워크 연결은 성공, 실패로 결과가 나오기때문에 Single타입으로 내보냄
     func searchBlog(query: String) -> Single<Result<DKBlog, SearchNetworkError>>{
         guard let url = api.searchBlog(query: query).url else { return .just(.failure(.invalidURL)) }
