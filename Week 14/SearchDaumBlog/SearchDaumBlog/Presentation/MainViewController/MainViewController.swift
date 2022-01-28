@@ -13,15 +13,15 @@ import SnapKit
 class MainViewController: UIViewController {
     let disposeBag = DisposeBag()
     
+//    MVVM 리팩토링
     let listView = BlogListView()
     let searchBar = SearchBar()
-    
-    let alertActionTapped = PublishRelay<AlertAction>()
+//
+//    let alertActionTapped = PublishRelay<AlertAction>()
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super .init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
-        bind()
         attribute()
         layout()
     }
@@ -32,7 +32,12 @@ class MainViewController: UIViewController {
     
     //Rx코드를 작성할 바인드 코드
     // 갖가지 UIControl과 UI component에 대한 바인딩 작업을 할 예정
-    private func bind() {
+    func bind(_ viewModel: MainViewModel) {
+        listView.bind(viewModel.blogListViewModel)
+        searchBar.bind(viewModel.searchBarViewModel)
+        
+//        MVVM 리팩토링 : 네트워크 로직은 View가 알 필요 없음
+        /*
         let blogResult = searchBar.shouldLoadResult
             .flatMapLatest { query in
                 SearchBlogNetwork().searchBlog(query: query)
@@ -55,7 +60,10 @@ class MainViewController: UIViewController {
                 
                 return error.localizedDescription
             }
+         */
         
+//        MVVM 리팩토링 : 네트워크로 가져온 값을 하위 ViewModel로 전달해주면됨
+        /*
         //네트워크를 통해 가져온 값을 cellData로 변환
         let cellData = blogValue
             .map { blog -> [BlogListCellData] in
@@ -103,7 +111,10 @@ class MainViewController: UIViewController {
             }
             .bind(to: listView.cellData)
             .disposed(by: disposeBag)
+         */
         
+//        MVVM 리팩토링 : Sorting, Error 메세지도 모두 가져옴
+        /*
         let alertSheetForSorting = listView.headerView.sortButtonTapped
             .map { _ -> Alert in
                 return (title: nil, message: nil, actions: [.title, .datetime, .cancel], style: .actionSheet)
@@ -118,19 +129,21 @@ class MainViewController: UIViewController {
                     style: .alert
                 )
             }
+         */
         
         // 기존 alert메세지와 함께 에러가 발생했을 때도 alert가 발생할 수 있도록 merge()를 이용해 묶어줌
-        Observable
-            .merge(
-                alertSheetForSorting,
-                alertForErrorMessage
-            )
-            .asSignal(onErrorSignalWith: .empty())
+//        Observable
+//            .merge(
+//                alertSheetForSorting,
+//                alertForErrorMessage
+//            )
+        viewModel.shouldPresentAlert
+//            .asSignal(onErrorSignalWith: .empty())
             .flatMapLatest { alert -> Signal<AlertAction> in
                 let alertController = UIAlertController(title: alert.title, message: alert.message, preferredStyle: alert.style)
                 return self.presentAlertController(alertController, actions: alert.actions)
             }
-            .emit(to: alertActionTapped)
+            .emit(to: viewModel.alertActionTapped)
             .disposed(by: disposeBag)
     }
     
