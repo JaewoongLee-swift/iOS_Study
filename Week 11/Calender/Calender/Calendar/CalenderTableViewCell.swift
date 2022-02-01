@@ -9,13 +9,18 @@ import UIKit
 import SnapKit
 
 class CalenderTableViewCell: UITableViewCell {
-    let name: String = "이재웅"
-    let startTime: Int = 8
-    let finishTime: Int = 10
+    let jaewoong = UserData(
+        name: "이재웅",
+        date: "",
+        startTime: 8,
+        finishTime: 10,
+        type: "",
+        memo: ""
+    )
     
     lazy var nameLabel: UILabel = {
         let label = UILabel()
-        label.text = name
+        label.text = jaewoong.name
         label.font = .systemFont(ofSize: 15.0, weight: .semibold)
         
         return label
@@ -23,7 +28,7 @@ class CalenderTableViewCell: UITableViewCell {
     
     lazy var exerciseHourLabel: UILabel = {
         let label = UILabel()
-        label.text = "\(startTime)시 ~ \(finishTime)시"
+        label.text = "\(jaewoong.startTime ?? 0)시 ~ \(jaewoong.finishTime ?? 0)시"
         label.font = .systemFont(ofSize: 15.0, weight: .medium)
         
         return label
