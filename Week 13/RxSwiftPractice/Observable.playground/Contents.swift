@@ -85,7 +85,7 @@ Observable<Void>.empty()
 //즉시 종료할 수 있는 Observable을 리턴하고 싶을 때, 또는 의도적으로 0개의 값을 가지는 Observable을 리턴하고 싶을 때 사용 가능
 
 print("--------never--------")
-Observable.never()
+Observable<Void>.never()
     .subscribe(onNext: {
         print($0)
     }, onCompleted: {
@@ -96,7 +96,7 @@ Observable.never()
 
 print("--------never2--------")
 Observable.never()
-    .debug("never")
+    .debug("안녕")
     .subscribe(onNext: {
         print($0)
     }, onCompleted: {
@@ -172,13 +172,13 @@ Observable<Int>.create { observer -> Disposable in
         print($0)
     },
     onError: {
-        print($0.localizedDescription)
+        print("에러발생 : \($0.localizedDescription)")
     },
     onCompleted: {
         print("completed")
     },
     onDisposed: {
-        print("disposed")
+        print("disposed!")
     }
 )
 .disposed(by: disposeBag)
@@ -209,7 +209,7 @@ Observable<Int>.create { observer -> Disposable in
 //이렇게 되면 당연히 1, 2 모두 찍히고 종료가 아무것도 되지 않고(Completed, Error) Disposed도 되지 않기 때문에 결과적으로 메모리 누수가 발생하게 될것.
 //따라서 반드시 disposed 코드를 넣어줘야 할 것임
 
-print("------defered1------")
+print("------deferred1------")
 //subscribe를 기다리는 Observable를 만드는 대신에 각 subscribe들에게 새롭게 observable항목을 제공하는 observable Factory 방식
 Observable.deferred {
     Observable.of(1, 2, 3)
@@ -219,7 +219,7 @@ Observable.deferred {
 }
 .disposed(by: disposeBag)
 
-print("------defered2------")
+print("------deferred2------")
 var 뒤집기: Bool = false
 
 let factory: Observable<String> = Observable.deferred {
