@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 class CalenderTableViewCell: UITableViewCell {
-    let jaewoong = UserData(
+    let jaewoong = MemberInformation(
         name: "이재웅",
         date: "",
         startTime: 8,
