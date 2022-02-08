@@ -11,14 +11,17 @@ import RxCocoa
 struct CategoryViewModel {
     let disposeBag = DisposeBag()
     
+//    ViewModel -> View
     // View에 전달할 데이터
     let cellData: Driver<[Category]>
     // pop 이벤트를 읽어야함
     let pop: Signal<Void>
+    
+//    View -> ViewMdoel
     // 어떤 item이 선택되었는지 확인(row값을 읽음)
     let itemSelected = PublishRelay<Int>()
     
-    // 다른 MainView에 전달할 수 있도록
+//    ViewModel -> ParentsViewModel
     let selectedCategory = PublishSubject<Category>()
     
     init() {

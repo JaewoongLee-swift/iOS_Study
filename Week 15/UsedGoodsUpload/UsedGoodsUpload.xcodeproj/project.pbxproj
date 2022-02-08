@@ -8,35 +8,44 @@
 
 /* Begin PBXBuildFile section */
 		742232A8495FA3D644CA7DD7 /* Pods_UsedGoodsUpload.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76F344FE1F189D602A1E94F7 /* Pods_UsedGoodsUpload.framework */; };
+		9D75BD3227AD049A004BD357 /* PriceTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D75BD3027AD0402004BD357 /* PriceTextFieldCell.swift */; };
+		9D75BD3327AD049A004BD357 /* PriceTextFieldCellVeiwModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D75BD3127AD0402004BD357 /* PriceTextFieldCellVeiwModel.swift */; };
+		9D75BD4027AD0577004BD357 /* DetailWriteFormCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D75BD3E27AD0547004BD357 /* DetailWriteFormCellViewModel.swift */; };
+		9D75BD4127AD0577004BD357 /* DetailWriteFormCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D75BD3F27AD0550004BD357 /* DetailWriteFormCell.swift */; };
 		9DAF02E327A700B9000F46D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAF02E227A700B9000F46D2 /* AppDelegate.swift */; };
 		9DAF02E527A700B9000F46D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAF02E427A700B9000F46D2 /* SceneDelegate.swift */; };
 		9DAF02EC27A700BE000F46D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DAF02EB27A700BE000F46D2 /* Assets.xcassets */; };
 		9DAF02EF27A700BE000F46D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DAF02ED27A700BE000F46D2 /* LaunchScreen.storyboard */; };
+		9DBD707927B2469E009D900A /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBD707827B2469E009D900A /* MainModel.swift */; };
 		9DDAC26827AA622100435AF1 /* TitleTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDAC26727AA60DE00435AF1 /* TitleTextFieldCell.swift */; };
 		9DDAC26927AA636B00435AF1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDAC25F27AA60B200435AF1 /* MainViewController.swift */; };
 		9DDAC26A27AA636B00435AF1 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDAC26027AA60B200435AF1 /* MainViewModel.swift */; };
 		9DDAC26B27AA636F00435AF1 /* TitleTextFieldCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDAC26627AA60DE00435AF1 /* TitleTextFieldCellViewModel.swift */; };
 		9DDAC26F27ABBE7A00435AF1 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDAC26E27ABBE7A00435AF1 /* Category.swift */; };
 		9DDAC27527ABBEEF00435AF1 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDAC27427ABBED200435AF1 /* CategoryViewModel.swift */; };
-		9DDAC27727ABC6C300435AF1 /* CategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDAC27627ABC6C300435AF1 /* CategoryListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		76F344FE1F189D602A1E94F7 /* Pods_UsedGoodsUpload.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UsedGoodsUpload.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9489E706902E71A61931F035 /* Pods-UsedGoodsUpload.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UsedGoodsUpload.debug.xcconfig"; path = "Target Support Files/Pods-UsedGoodsUpload/Pods-UsedGoodsUpload.debug.xcconfig"; sourceTree = "<group>"; };
+		9D75BD3027AD0402004BD357 /* PriceTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTextFieldCell.swift; sourceTree = "<group>"; };
+		9D75BD3127AD0402004BD357 /* PriceTextFieldCellVeiwModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTextFieldCellVeiwModel.swift; sourceTree = "<group>"; };
+		9D75BD3E27AD0547004BD357 /* DetailWriteFormCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWriteFormCellViewModel.swift; sourceTree = "<group>"; };
+		9D75BD3F27AD0550004BD357 /* DetailWriteFormCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWriteFormCell.swift; sourceTree = "<group>"; };
+		9DA2B19027ACF4E1006F7485 /* CategoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewController.swift; sourceTree = "<group>"; };
 		9DAF02DF27A700B9000F46D2 /* UsedGoodsUpload.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UsedGoodsUpload.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DAF02E227A700B9000F46D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DAF02E427A700B9000F46D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9DAF02EB27A700BE000F46D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9DAF02EE27A700BE000F46D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9DAF02F027A700BE000F46D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DBD707827B2469E009D900A /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 		9DDAC25F27AA60B200435AF1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9DDAC26027AA60B200435AF1 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		9DDAC26627AA60DE00435AF1 /* TitleTextFieldCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTextFieldCellViewModel.swift; sourceTree = "<group>"; };
 		9DDAC26727AA60DE00435AF1 /* TitleTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTextFieldCell.swift; sourceTree = "<group>"; };
 		9DDAC26E27ABBE7A00435AF1 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		9DDAC27427ABBED200435AF1 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
-		9DDAC27627ABC6C300435AF1 /* CategoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CategoryListViewController.swift; path = ../../../../../../../CategoryListViewController.swift; sourceTree = "<group>"; };
 		EA90BBA9754A59FFEFB4FEB8 /* Pods-UsedGoodsUpload.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UsedGoodsUpload.release.xcconfig"; path = "Target Support Files/Pods-UsedGoodsUpload/Pods-UsedGoodsUpload.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -52,6 +61,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D75BD2F27AD0402004BD357 /* PriceTextFieldCell */ = {
+			isa = PBXGroup;
+			children = (
+				9D75BD3127AD0402004BD357 /* PriceTextFieldCellVeiwModel.swift */,
+				9D75BD3027AD0402004BD357 /* PriceTextFieldCell.swift */,
+			);
+			path = PriceTextFieldCell;
+			sourceTree = "<group>";
+		};
+		9D75BD4227AD0587004BD357 /* DetailWriteFormCell */ = {
+			isa = PBXGroup;
+			children = (
+				9D75BD3E27AD0547004BD357 /* DetailWriteFormCellViewModel.swift */,
+				9D75BD3F27AD0550004BD357 /* DetailWriteFormCell.swift */,
+			);
+			path = DetailWriteFormCell;
+			sourceTree = "<group>";
+		};
+		9DA2B18F27ACF4E1006F7485 /* CategoryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9DDAC27427ABBED200435AF1 /* CategoryViewModel.swift */,
+				9DA2B19027ACF4E1006F7485 /* CategoryListViewController.swift */,
+			);
+			path = CategoryViewController;
+			sourceTree = "<group>";
+		};
 		9DAF02D627A700B9000F46D2 = {
 			isa = PBXGroup;
 			children = (
@@ -89,9 +125,11 @@
 			children = (
 				9DDAC25F27AA60B200435AF1 /* MainViewController.swift */,
 				9DDAC26027AA60B200435AF1 /* MainViewModel.swift */,
+				9DBD707827B2469E009D900A /* MainModel.swift */,
 				9DDAC26527AA60DE00435AF1 /* TitleTextFieldCell */,
-				9DDAC27427ABBED200435AF1 /* CategoryViewModel.swift */,
-				9DDAC27627ABC6C300435AF1 /* CategoryListViewController.swift */,
+				9DA2B18F27ACF4E1006F7485 /* CategoryViewController */,
+				9D75BD2F27AD0402004BD357 /* PriceTextFieldCell */,
+				9D75BD4227AD0587004BD357 /* DetailWriteFormCell */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
@@ -252,15 +290,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D75BD4027AD0577004BD357 /* DetailWriteFormCellViewModel.swift in Sources */,
+				9DBD707927B2469E009D900A /* MainModel.swift in Sources */,
 				9DDAC26A27AA636B00435AF1 /* MainViewModel.swift in Sources */,
 				9DDAC26B27AA636F00435AF1 /* TitleTextFieldCellViewModel.swift in Sources */,
-				9DDAC27727ABC6C300435AF1 /* CategoryListViewController.swift in Sources */,
+				9D75BD3327AD049A004BD357 /* PriceTextFieldCellVeiwModel.swift in Sources */,
 				9DAF02E327A700B9000F46D2 /* AppDelegate.swift in Sources */,
 				9DDAC26827AA622100435AF1 /* TitleTextFieldCell.swift in Sources */,
 				9DDAC27527ABBEEF00435AF1 /* CategoryViewModel.swift in Sources */,
 				9DAF02E527A700B9000F46D2 /* SceneDelegate.swift in Sources */,
 				9DDAC26927AA636B00435AF1 /* MainViewController.swift in Sources */,
 				9DDAC26F27ABBE7A00435AF1 /* Category.swift in Sources */,
+				9D75BD4127AD0577004BD357 /* DetailWriteFormCell.swift in Sources */,
+				9D75BD3227AD049A004BD357 /* PriceTextFieldCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
