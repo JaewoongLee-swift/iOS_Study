@@ -29,7 +29,71 @@ class MainViewController: UIViewController {
     }
     
     func bind(_ viewModel: MainViewModel) {
+        viewModel.cellData
+            .drive(tableView.rx.items) { tv, row, data in
+                switch row {
+                case 0:
+                    let cell = tv.dequeueReusableCell(withIdentifier: "TitleTextFieldCell", for: IndexPath(row: row, section: 0)) as! TitleTextFieldCell
+                    
+                    //선택시 회색 음영이 생기지 않게 하는것
+                    cell.selectionStyle = .none
+                    cell.titleInputField.placeholder = data
+                    cell.bind(viewModel.titleTextFieldCellViewModel)
+                    
+                    return cell
+                case 1:
+                    let cell = tv.dequeueReusableCell(withIdentifier: "CategorySelectCell", for: IndexPath(row: row, section: 0))
+                    
+                    cell.selectionStyle = .none
+                    cell.textLabel?.text = data
+                    // 버튼 우측에 꺽새모양 표시
+                    cell.accessoryType = .disclosureIndicator
+                    
+                    return cell
+                case 2:
+                    let cell = tv.dequeueReusableCell(withIdentifier: "PriceTextFieldCell", for: IndexPath(row: row, section: 0)) as! PriceTextFieldCell
+                    
+                    cell.selectionStyle = .none
+                    cell.priceInputField.placeholder = data
+                    cell.bind(viewModel.priceTextFieldCellViewModel)
+                    
+                    return cell
+                    
+                case 3:
+                    let cell = tv.dequeueReusableCell(withIdentifier: "DetailWriteFormCell", for: IndexPath(row: row, section: 0)) as! DetailWriteFormCell
+                    
+                    cell.selectionStyle = .none
+                    cell.contentInputView.text = data
+                    cell.bind(viewModel.detailWriteFromCellViewModel)
+                    
+                    return cell
+                    
+                default:
+                    fatalError()
+                }
+            }
+            .disposed(by: disposeBag)
         
+        viewModel.presentAlert
+            .emit(to: self.rx.setAlert)
+            .disposed(by: disposeBag)
+        
+        viewModel.push
+            .drive(onNext: { viewModel in
+                let viewController = CategoryListViewController()
+                viewController.bind(viewModel)
+                self.show(viewController, sender: nil)
+            })
+            .disposed(by: disposeBag)
+        
+        tableView.rx.itemSelected
+            .map { $0.row }
+            .bind(to: viewModel.itemSelected)
+            .disposed(by: disposeBag)
+        
+        submitButton.rx.tap
+            .bind(to: viewModel.submitButtonTapped)
+            .disposed(by: disposeBag)
     }
     
     private func attribute() {

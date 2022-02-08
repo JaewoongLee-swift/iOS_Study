@@ -17,6 +17,7 @@
 		9DAF02EC27A700BE000F46D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DAF02EB27A700BE000F46D2 /* Assets.xcassets */; };
 		9DAF02EF27A700BE000F46D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DAF02ED27A700BE000F46D2 /* LaunchScreen.storyboard */; };
 		9DBD707927B2469E009D900A /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DBD707827B2469E009D900A /* MainModel.swift */; };
+		9DBD707A27B24FF8009D900A /* CategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA2B19027ACF4E1006F7485 /* CategoryListViewController.swift */; };
 		9DDAC26827AA622100435AF1 /* TitleTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDAC26727AA60DE00435AF1 /* TitleTextFieldCell.swift */; };
 		9DDAC26927AA636B00435AF1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDAC25F27AA60B200435AF1 /* MainViewController.swift */; };
 		9DDAC26A27AA636B00435AF1 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDAC26027AA60B200435AF1 /* MainViewModel.swift */; };
@@ -82,8 +83,8 @@
 		9DA2B18F27ACF4E1006F7485 /* CategoryViewController */ = {
 			isa = PBXGroup;
 			children = (
-				9DDAC27427ABBED200435AF1 /* CategoryViewModel.swift */,
 				9DA2B19027ACF4E1006F7485 /* CategoryListViewController.swift */,
+				9DDAC27427ABBED200435AF1 /* CategoryViewModel.swift */,
 			);
 			path = CategoryViewController;
 			sourceTree = "<group>";
@@ -298,6 +299,7 @@
 				9DAF02E327A700B9000F46D2 /* AppDelegate.swift in Sources */,
 				9DDAC26827AA622100435AF1 /* TitleTextFieldCell.swift in Sources */,
 				9DDAC27527ABBEEF00435AF1 /* CategoryViewModel.swift in Sources */,
+				9DBD707A27B24FF8009D900A /* CategoryListViewController.swift in Sources */,
 				9DAF02E527A700B9000F46D2 /* SceneDelegate.swift in Sources */,
 				9DDAC26927AA636B00435AF1 /* MainViewController.swift in Sources */,
 				9DDAC26F27ABBE7A00435AF1 /* Category.swift in Sources */,
