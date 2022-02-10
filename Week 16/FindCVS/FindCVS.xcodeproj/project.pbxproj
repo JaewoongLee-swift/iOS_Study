@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D3A5FEC27B4E5810007605D /* LocationInformationViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3A5FEB27B4E5810007605D /* LocationInformationViewcontroller.swift */; };
+		9D3A5FEF27B4E5C90007605D /* LocationInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3A5FEE27B4E5C90007605D /* LocationInformationViewModel.swift */; };
+		9D3A5FF527B4EF9D0007605D /* DaumMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D3A5FF427B4EF9D0007605D /* DaumMap.framework */; };
+		9D3A5FF627B4EF9D0007605D /* DaumMap.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9D3A5FF427B4EF9D0007605D /* DaumMap.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9D3A5FF827B504AB0007605D /* MTMapViewError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3A5FF727B504AB0007605D /* MTMapViewError.swift */; };
 		9DE7C50F27B3A4B000FF9B63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE7C50E27B3A4B000FF9B63 /* AppDelegate.swift */; };
 		9DE7C51127B3A4B000FF9B63 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE7C51027B3A4B000FF9B63 /* SceneDelegate.swift */; };
-		9DE7C51327B3A4B000FF9B63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE7C51227B3A4B000FF9B63 /* ViewController.swift */; };
-		9DE7C51627B3A4B000FF9B63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DE7C51427B3A4B000FF9B63 /* Main.storyboard */; };
 		9DE7C51827B3A4B200FF9B63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DE7C51727B3A4B200FF9B63 /* Assets.xcassets */; };
 		9DE7C51B27B3A4B200FF9B63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DE7C51927B3A4B200FF9B63 /* LaunchScreen.storyboard */; };
 		9DE7C52427B3A93400FF9B63 /* DaumMap.embeddedframework in Resources */ = {isa = PBXBuildFile; fileRef = 9DE7C52327B3A91200FF9B63 /* DaumMap.embeddedframework */; };
@@ -24,14 +27,34 @@
 		9DE7C53527B3B88300FF9B63 /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE7C53427B3B88300FF9B63 /* LocationData.swift */; };
 		9DE7C53827B3B8CE00FF9B63 /* KLDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE7C53727B3B8CE00FF9B63 /* KLDocument.swift */; };
 		9DE7C53A27B3B9B200FF9B63 /* DetailListCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE7C53927B3B9B200FF9B63 /* DetailListCellData.swift */; };
+		E39FD3D74ECAD69EE3211F35 /* Pods_FindCVS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B3E98A773BA3A52352924D /* Pods_FindCVS.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		9D3A5FF327B4EF8E0007605D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9D3A5FF627B4EF9D0007605D /* DaumMap.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		7458884DF7101483142925CC /* Pods-FindCVS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindCVS.debug.xcconfig"; path = "Target Support Files/Pods-FindCVS/Pods-FindCVS.debug.xcconfig"; sourceTree = "<group>"; };
+		84B3E98A773BA3A52352924D /* Pods_FindCVS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindCVS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		953D2E2FFB5EEEBE5270B2E9 /* Pods-FindCVS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindCVS.release.xcconfig"; path = "Target Support Files/Pods-FindCVS/Pods-FindCVS.release.xcconfig"; sourceTree = "<group>"; };
+		9D3A5FEB27B4E5810007605D /* LocationInformationViewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInformationViewcontroller.swift; sourceTree = "<group>"; };
+		9D3A5FEE27B4E5C90007605D /* LocationInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInformationViewModel.swift; sourceTree = "<group>"; };
+		9D3A5FF427B4EF9D0007605D /* DaumMap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DaumMap.framework; path = DaumMap.embeddedframework/DaumMap.framework; sourceTree = "<group>"; };
+		9D3A5FF727B504AB0007605D /* MTMapViewError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTMapViewError.swift; sourceTree = "<group>"; };
 		9DE7C50B27B3A4B000FF9B63 /* FindCVS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindCVS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DE7C50E27B3A4B000FF9B63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DE7C51027B3A4B000FF9B63 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9DE7C51227B3A4B000FF9B63 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9DE7C51527B3A4B000FF9B63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9DE7C51727B3A4B200FF9B63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9DE7C51A27B3A4B200FF9B63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9DE7C51C27B3A4B200FF9B63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,18 +84,30 @@
 				9DE7C52B27B3AB3800FF9B63 /* CoreLocation.framework in Frameworks */,
 				9DE7C52927B3AAA400FF9B63 /* SystemConfiguration.framework in Frameworks */,
 				9DE7C52727B3AA9D00FF9B63 /* OpenGLES.framework in Frameworks */,
+				9D3A5FF527B4EF9D0007605D /* DaumMap.framework in Frameworks */,
+				E39FD3D74ECAD69EE3211F35 /* Pods_FindCVS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D3A5FED27B4E5910007605D /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				9D3A5FEB27B4E5810007605D /* LocationInformationViewcontroller.swift */,
+				9D3A5FEE27B4E5C90007605D /* LocationInformationViewModel.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 		9DE7C50227B3A4B000FF9B63 = {
 			isa = PBXGroup;
 			children = (
 				9DE7C50D27B3A4B000FF9B63 /* FindCVS */,
 				9DE7C50C27B3A4B000FF9B63 /* Products */,
 				9DE7C52227B3A91200FF9B63 /* Frameworks */,
+				A00B424F24EADA546FC34E29 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,9 +125,8 @@
 				9DE7C52527B3A9F200FF9B63 /* BridgingHeader.h */,
 				9DE7C50E27B3A4B000FF9B63 /* AppDelegate.swift */,
 				9DE7C51027B3A4B000FF9B63 /* SceneDelegate.swift */,
-				9DE7C51227B3A4B000FF9B63 /* ViewController.swift */,
+				9D3A5FED27B4E5910007605D /* Presentation */,
 				9DE7C53627B3B88E00FF9B63 /* Entities */,
-				9DE7C51427B3A4B000FF9B63 /* Main.storyboard */,
 				9DE7C51727B3A4B200FF9B63 /* Assets.xcassets */,
 				9DE7C51927B3A4B200FF9B63 /* LaunchScreen.storyboard */,
 				9DE7C51C27B3A4B200FF9B63 /* Info.plist */,
@@ -108,9 +142,11 @@
 				9DE7C52E27B3AB4C00FF9B63 /* libc++.tbd */,
 				9DE7C52C27B3AB4000FF9B63 /* QuartzCore.framework */,
 				9DE7C52A27B3AB3800FF9B63 /* CoreLocation.framework */,
+				9D3A5FF427B4EF9D0007605D /* DaumMap.framework */,
 				9DE7C52827B3AAA400FF9B63 /* SystemConfiguration.framework */,
 				9DE7C52627B3AA9D00FF9B63 /* OpenGLES.framework */,
 				9DE7C52327B3A91200FF9B63 /* DaumMap.embeddedframework */,
+				84B3E98A773BA3A52352924D /* Pods_FindCVS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -121,8 +157,18 @@
 				9DE7C53427B3B88300FF9B63 /* LocationData.swift */,
 				9DE7C53727B3B8CE00FF9B63 /* KLDocument.swift */,
 				9DE7C53927B3B9B200FF9B63 /* DetailListCellData.swift */,
+				9D3A5FF727B504AB0007605D /* MTMapViewError.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		A00B424F24EADA546FC34E29 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7458884DF7101483142925CC /* Pods-FindCVS.debug.xcconfig */,
+				953D2E2FFB5EEEBE5270B2E9 /* Pods-FindCVS.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,9 +178,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9DE7C51F27B3A4B200FF9B63 /* Build configuration list for PBXNativeTarget "FindCVS" */;
 			buildPhases = (
+				9461225B8ABB73CA02E5202B /* [CP] Check Pods Manifest.lock */,
 				9DE7C50727B3A4B000FF9B63 /* Sources */,
 				9DE7C50827B3A4B000FF9B63 /* Frameworks */,
 				9DE7C50927B3A4B000FF9B63 /* Resources */,
+				B42DE5E08D819973ABE8835F /* [CP] Embed Pods Frameworks */,
+				9D3A5FF327B4EF8E0007605D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -186,11 +235,52 @@
 				9DE7C52427B3A93400FF9B63 /* DaumMap.embeddedframework in Resources */,
 				9DE7C51B27B3A4B200FF9B63 /* LaunchScreen.storyboard in Resources */,
 				9DE7C51827B3A4B200FF9B63 /* Assets.xcassets in Resources */,
-				9DE7C51627B3A4B000FF9B63 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9461225B8ABB73CA02E5202B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FindCVS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B42DE5E08D819973ABE8835F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindCVS/Pods-FindCVS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindCVS/Pods-FindCVS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindCVS/Pods-FindCVS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9DE7C50727B3A4B000FF9B63 /* Sources */ = {
@@ -199,24 +289,18 @@
 			files = (
 				9DE7C53527B3B88300FF9B63 /* LocationData.swift in Sources */,
 				9DE7C53827B3B8CE00FF9B63 /* KLDocument.swift in Sources */,
-				9DE7C51327B3A4B000FF9B63 /* ViewController.swift in Sources */,
 				9DE7C50F27B3A4B000FF9B63 /* AppDelegate.swift in Sources */,
+				9D3A5FF827B504AB0007605D /* MTMapViewError.swift in Sources */,
 				9DE7C53A27B3B9B200FF9B63 /* DetailListCellData.swift in Sources */,
+				9D3A5FEC27B4E5810007605D /* LocationInformationViewcontroller.swift in Sources */,
 				9DE7C51127B3A4B000FF9B63 /* SceneDelegate.swift in Sources */,
+				9D3A5FEF27B4E5C90007605D /* LocationInformationViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9DE7C51427B3A4B000FF9B63 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9DE7C51527B3A4B000FF9B63 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9DE7C51927B3A4B200FF9B63 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -346,16 +430,25 @@
 		};
 		9DE7C52027B3A4B200FF9B63 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7458884DF7101483142925CC /* Pods-FindCVS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RxCocoa\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RxRelay\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RxSwift\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SnapKit\"",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/DaumMap.embeddedframework",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FindCVS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -369,21 +462,31 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/jaewoong/Documents/iOS_StudyGroup/Week 16/FindCVS/FindCVS/BridgingHeader.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Debug;
 		};
 		9DE7C52127B3A4B200FF9B63 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 953D2E2FFB5EEEBE5270B2E9 /* Pods-FindCVS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RxCocoa\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RxRelay\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/RxSwift\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SnapKit\"",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/DaumMap.embeddedframework",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FindCVS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -397,6 +500,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/jaewoong/Documents/iOS_StudyGroup/Week 16/FindCVS/FindCVS/BridgingHeader.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = YES;
 			};
 			name = Release;
 		};
