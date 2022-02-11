@@ -12,6 +12,9 @@
 		9D3A5FF527B4EF9D0007605D /* DaumMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D3A5FF427B4EF9D0007605D /* DaumMap.framework */; };
 		9D3A5FF627B4EF9D0007605D /* DaumMap.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9D3A5FF427B4EF9D0007605D /* DaumMap.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9D3A5FF827B504AB0007605D /* MTMapViewError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3A5FF727B504AB0007605D /* MTMapViewError.swift */; };
+		9D3A5FFC27B643AC0007605D /* DetailListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3A5FFB27B643AC0007605D /* DetailListCell.swift */; };
+		9D3A5FFE27B647640007605D /* DetailListBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3A5FFD27B647640007605D /* DetailListBackgroundView.swift */; };
+		9D3A600027B6476D0007605D /* DetailListBackgroundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3A5FFF27B6476D0007605D /* DetailListBackgroundViewModel.swift */; };
 		9DE7C50F27B3A4B000FF9B63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE7C50E27B3A4B000FF9B63 /* AppDelegate.swift */; };
 		9DE7C51127B3A4B000FF9B63 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE7C51027B3A4B000FF9B63 /* SceneDelegate.swift */; };
 		9DE7C51827B3A4B200FF9B63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DE7C51727B3A4B200FF9B63 /* Assets.xcassets */; };
@@ -52,6 +55,9 @@
 		9D3A5FEE27B4E5C90007605D /* LocationInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInformationViewModel.swift; sourceTree = "<group>"; };
 		9D3A5FF427B4EF9D0007605D /* DaumMap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DaumMap.framework; path = DaumMap.embeddedframework/DaumMap.framework; sourceTree = "<group>"; };
 		9D3A5FF727B504AB0007605D /* MTMapViewError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTMapViewError.swift; sourceTree = "<group>"; };
+		9D3A5FFB27B643AC0007605D /* DetailListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListCell.swift; sourceTree = "<group>"; };
+		9D3A5FFD27B647640007605D /* DetailListBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListBackgroundView.swift; sourceTree = "<group>"; };
+		9D3A5FFF27B6476D0007605D /* DetailListBackgroundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListBackgroundViewModel.swift; sourceTree = "<group>"; };
 		9DE7C50B27B3A4B000FF9B63 /* FindCVS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindCVS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DE7C50E27B3A4B000FF9B63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DE7C51027B3A4B000FF9B63 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +103,9 @@
 			children = (
 				9D3A5FEB27B4E5810007605D /* LocationInformationViewcontroller.swift */,
 				9D3A5FEE27B4E5C90007605D /* LocationInformationViewModel.swift */,
+				9D3A5FFB27B643AC0007605D /* DetailListCell.swift */,
+				9D3A5FFD27B647640007605D /* DetailListBackgroundView.swift */,
+				9D3A5FFF27B6476D0007605D /* DetailListBackgroundViewModel.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -288,9 +297,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DE7C53527B3B88300FF9B63 /* LocationData.swift in Sources */,
+				9D3A5FFE27B647640007605D /* DetailListBackgroundView.swift in Sources */,
+				9D3A600027B6476D0007605D /* DetailListBackgroundViewModel.swift in Sources */,
 				9DE7C53827B3B8CE00FF9B63 /* KLDocument.swift in Sources */,
 				9DE7C50F27B3A4B000FF9B63 /* AppDelegate.swift in Sources */,
 				9D3A5FF827B504AB0007605D /* MTMapViewError.swift in Sources */,
+				9D3A5FFC27B643AC0007605D /* DetailListCell.swift in Sources */,
 				9DE7C53A27B3B9B200FF9B63 /* DetailListCellData.swift in Sources */,
 				9D3A5FEC27B4E5810007605D /* LocationInformationViewcontroller.swift in Sources */,
 				9DE7C51127B3A4B000FF9B63 /* SceneDelegate.swift in Sources */,
