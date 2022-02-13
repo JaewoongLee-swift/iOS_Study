@@ -30,10 +30,18 @@ class DetailListBackgroundView: UIView {
     }
     
     private func attribute() {
+        backgroundColor = .white
         
+        statusLabel.text = "🏪"
+        statusLabel.textAlignment = .center
     }
     
     private func layout() {
+        addSubview(statusLabel)
         
+        statusLabel.snp.makeConstraints {
+            $0.center.equalToSuperview()
+            $0.leading.trailing.equalToSuperview().inset(20.0)
+        }
     }
 }
