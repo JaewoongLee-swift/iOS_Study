@@ -34,7 +34,7 @@ class LocationInformationViewController: UIViewController {
         layout()
     }
     
-    private func bind(_ viewModel: LocationInformationViewModel) {
+    func bind(_ viewModel: LocationInformationViewModel) {
         detailListBackgroundView.bind(viewModel.detailListBackgroundViewModel)
         viewModel.setMapCenter
             .emit(to: mapView.rx.setMapCenterPoint)

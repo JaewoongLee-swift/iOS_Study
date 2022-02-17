@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D03C6AE27BE1829009E93E3 /* LocalAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D03C6AD27BE1829009E93E3 /* LocalAPI.swift */; };
+		9D03C6B127BE19B9009E93E3 /* LocalNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D03C6B027BE19B9009E93E3 /* LocalNetwork.swift */; };
+		9D03C6B327BE1DE0009E93E3 /* LocationInformationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D03C6B227BE1DE0009E93E3 /* LocationInformationModel.swift */; };
+		9D03C6B527BE2F78009E93E3 /* DaumMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D3A5FF427B4EF9D0007605D /* DaumMap.framework */; };
+		9D03C6B627BE2F78009E93E3 /* DaumMap.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9D3A5FF427B4EF9D0007605D /* DaumMap.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9D3A5FEC27B4E5810007605D /* LocationInformationViewcontroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3A5FEB27B4E5810007605D /* LocationInformationViewcontroller.swift */; };
 		9D3A5FEF27B4E5C90007605D /* LocationInformationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3A5FEE27B4E5C90007605D /* LocationInformationViewModel.swift */; };
-		9D3A5FF527B4EF9D0007605D /* DaumMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D3A5FF427B4EF9D0007605D /* DaumMap.framework */; };
-		9D3A5FF627B4EF9D0007605D /* DaumMap.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9D3A5FF427B4EF9D0007605D /* DaumMap.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9D3A5FF827B504AB0007605D /* MTMapViewError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3A5FF727B504AB0007605D /* MTMapViewError.swift */; };
 		9D3A5FFC27B643AC0007605D /* DetailListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3A5FFB27B643AC0007605D /* DetailListCell.swift */; };
 		9D3A5FFE27B647640007605D /* DetailListBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3A5FFD27B647640007605D /* DetailListBackgroundView.swift */; };
@@ -34,13 +37,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		9D3A5FF327B4EF8E0007605D /* Embed Frameworks */ = {
+		9D03C6B727BE2F78009E93E3 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9D3A5FF627B4EF9D0007605D /* DaumMap.framework in Embed Frameworks */,
+				9D03C6B627BE2F78009E93E3 /* DaumMap.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,6 +54,9 @@
 		7458884DF7101483142925CC /* Pods-FindCVS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindCVS.debug.xcconfig"; path = "Target Support Files/Pods-FindCVS/Pods-FindCVS.debug.xcconfig"; sourceTree = "<group>"; };
 		84B3E98A773BA3A52352924D /* Pods_FindCVS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindCVS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		953D2E2FFB5EEEBE5270B2E9 /* Pods-FindCVS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindCVS.release.xcconfig"; path = "Target Support Files/Pods-FindCVS/Pods-FindCVS.release.xcconfig"; sourceTree = "<group>"; };
+		9D03C6AD27BE1829009E93E3 /* LocalAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAPI.swift; sourceTree = "<group>"; };
+		9D03C6B027BE19B9009E93E3 /* LocalNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetwork.swift; sourceTree = "<group>"; };
+		9D03C6B227BE1DE0009E93E3 /* LocationInformationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInformationModel.swift; sourceTree = "<group>"; };
 		9D3A5FEB27B4E5810007605D /* LocationInformationViewcontroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInformationViewcontroller.swift; sourceTree = "<group>"; };
 		9D3A5FEE27B4E5C90007605D /* LocationInformationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInformationViewModel.swift; sourceTree = "<group>"; };
 		9D3A5FF427B4EF9D0007605D /* DaumMap.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DaumMap.framework; path = DaumMap.embeddedframework/DaumMap.framework; sourceTree = "<group>"; };
@@ -90,7 +96,7 @@
 				9DE7C52B27B3AB3800FF9B63 /* CoreLocation.framework in Frameworks */,
 				9DE7C52927B3AAA400FF9B63 /* SystemConfiguration.framework in Frameworks */,
 				9DE7C52727B3AA9D00FF9B63 /* OpenGLES.framework in Frameworks */,
-				9D3A5FF527B4EF9D0007605D /* DaumMap.framework in Frameworks */,
+				9D03C6B527BE2F78009E93E3 /* DaumMap.framework in Frameworks */,
 				E39FD3D74ECAD69EE3211F35 /* Pods_FindCVS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,11 +104,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9D3A5FED27B4E5910007605D /* Presentation */ = {
+		9D03C6AF27BE182F009E93E3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9D03C6AD27BE1829009E93E3 /* LocalAPI.swift */,
+				9D03C6B027BE19B9009E93E3 /* LocalNetwork.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		9D03C6B427BE1DEA009E93E3 /* LocationInfo */ = {
 			isa = PBXGroup;
 			children = (
 				9D3A5FEB27B4E5810007605D /* LocationInformationViewcontroller.swift */,
 				9D3A5FEE27B4E5C90007605D /* LocationInformationViewModel.swift */,
+				9D03C6B227BE1DE0009E93E3 /* LocationInformationModel.swift */,
+			);
+			path = LocationInfo;
+			sourceTree = "<group>";
+		};
+		9D3A5FED27B4E5910007605D /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				9D03C6B427BE1DEA009E93E3 /* LocationInfo */,
 				9D3A5FFB27B643AC0007605D /* DetailListCell.swift */,
 				9D3A5FFD27B647640007605D /* DetailListBackgroundView.swift */,
 				9D3A5FFF27B6476D0007605D /* DetailListBackgroundViewModel.swift */,
@@ -134,6 +158,7 @@
 				9DE7C52527B3A9F200FF9B63 /* BridgingHeader.h */,
 				9DE7C50E27B3A4B000FF9B63 /* AppDelegate.swift */,
 				9DE7C51027B3A4B000FF9B63 /* SceneDelegate.swift */,
+				9D03C6AF27BE182F009E93E3 /* Network */,
 				9D3A5FED27B4E5910007605D /* Presentation */,
 				9DE7C53627B3B88E00FF9B63 /* Entities */,
 				9DE7C51727B3A4B200FF9B63 /* Assets.xcassets */,
@@ -192,7 +217,7 @@
 				9DE7C50827B3A4B000FF9B63 /* Frameworks */,
 				9DE7C50927B3A4B000FF9B63 /* Resources */,
 				B42DE5E08D819973ABE8835F /* [CP] Embed Pods Frameworks */,
-				9D3A5FF327B4EF8E0007605D /* Embed Frameworks */,
+				9D03C6B727BE2F78009E93E3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -300,11 +325,14 @@
 				9D3A5FFE27B647640007605D /* DetailListBackgroundView.swift in Sources */,
 				9D3A600027B6476D0007605D /* DetailListBackgroundViewModel.swift in Sources */,
 				9DE7C53827B3B8CE00FF9B63 /* KLDocument.swift in Sources */,
+				9D03C6B127BE19B9009E93E3 /* LocalNetwork.swift in Sources */,
 				9DE7C50F27B3A4B000FF9B63 /* AppDelegate.swift in Sources */,
 				9D3A5FF827B504AB0007605D /* MTMapViewError.swift in Sources */,
+				9D03C6AE27BE1829009E93E3 /* LocalAPI.swift in Sources */,
 				9D3A5FFC27B643AC0007605D /* DetailListCell.swift in Sources */,
 				9DE7C53A27B3B9B200FF9B63 /* DetailListCellData.swift in Sources */,
 				9D3A5FEC27B4E5810007605D /* LocationInformationViewcontroller.swift in Sources */,
+				9D03C6B327BE1DE0009E93E3 /* LocationInformationModel.swift in Sources */,
 				9DE7C51127B3A4B000FF9B63 /* SceneDelegate.swift in Sources */,
 				9D3A5FEF27B4E5C90007605D /* LocationInformationViewModel.swift in Sources */,
 			);
